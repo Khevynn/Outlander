@@ -6,20 +6,42 @@
   <component name="ChangeListManager">
     <list default="true" id="f94f41cb-bacb-4454-ab73-771801b5df14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/MainCharacter/Astrounalts.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Meshes/MainCharacter/Astrounalts.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/MainCharacter/Astrounalts.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Meshes/MainCharacter/Astrounalts.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Black_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Black_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Blue_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Blue_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Green_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Green_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Orange_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Orange_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Pink_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Pink_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Red_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Red_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_White_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_White_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Yellow_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Yellow_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Props_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Props_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Astrounalt_Yellow Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Astrounalt_Yellow Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MechanicsTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MechanicsTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84f0d810adef4e6c8deab33e4ae93f7c1dec00/67/61508e79/Vector3.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84f0d810adef4e6c8deab33e4ae93f7c1dec00/7b/ec211a24/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -31,6 +53,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.codeium.enabled&quot;: &quot;true&quot;,
@@ -98,7 +121,9 @@
       <workItem from="1743164838266" duration="15000" />
       <workItem from="1743166497979" duration="14000" />
       <workItem from="1743167673475" duration="394000" />
-      <workItem from="1743256282963" duration="5907000" />
+      <workItem from="1743256282963" duration="6515000" />
+      <workItem from="1743329292378" duration="13677000" />
+      <workItem from="1743421375101" duration="5441000" />
     </task>
     <servers />
   </component>

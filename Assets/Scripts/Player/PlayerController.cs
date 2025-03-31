@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -15,8 +16,12 @@ public class PlayerController : MonoBehaviour
     private float _currentMaxSpeed;
     private Vector3 _moveDirection;
     
+    [Header("Jumping")]
+    [SerializeField] private float jumpForce = 10f;
+    
     [Header("Inputs")]
     private InputAction _moveAction;
+    private InputAction _jumpAction;
     private InputAction _sprintAction;
     
     private bool _onGround;
@@ -24,17 +29,29 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        
         _moveAction = InputSystem.actions.FindAction("Move");
-        _sprintAction = InputSystem.actions.FindAction("Sprint");}
+        _sprintAction = InputSystem.actions.FindAction("Sprint");
+        _jumpAction = InputSystem.actions.FindAction("Jump");
+    }
     private void FixedUpdate()
     {
         CheckIsGrounded();
         Movement();
-        
-        if(_sprintAction.IsPressed())
+
+        if (_jumpAction.IsPressed())
+        {
+            Jump();
+        }
+
+        if (_sprintAction.IsPressed() && _onGround)
+        {
             _currentMaxSpeed = sprintSpeed;
+        }
         else
+        {
             _currentMaxSpeed = walkSpeed;
+        }
     }
     
     private void Movement()
@@ -59,13 +76,18 @@ public class PlayerController : MonoBehaviour
             _rb.linearVelocity = new Vector3(limitedVel.x, _rb.linearVelocity.y, limitedVel.z);
         }
     }
+    
+    private void Jump()
+    {
+        if (!_onGround)
+            return;
+        
+        _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    }
 
     private void CheckIsGrounded()
     {
-        if (Physics.Raycast(transform.position, transform.up * -1, out RaycastHit hit, 0.5f))
-        {
-            _onGround = true;
-        }
+        _onGround = Physics.Raycast(transform.position + Vector3.up * 0.5f, transform.up * -1, out RaycastHit hit, 0.6f);
     }
     private Vector2 GetMoveInput()
     {
@@ -75,6 +97,6 @@ public class PlayerController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * 0.5f);
+        Gizmos.DrawLine(transform.position + Vector3.up * 0.5f, transform.position + Vector3.down * 0.1f);
     }
 }
