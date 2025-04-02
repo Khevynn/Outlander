@@ -6,24 +6,40 @@
   <component name="ChangeListManager">
     <list default="true" id="f94f41cb-bacb-4454-ab73-771801b5df14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/MainCharacter/Astrounalts.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Meshes/MainCharacter/Astrounalts.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/MainCharacter/Astrounalts.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Meshes/MainCharacter/Astrounalts.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Black_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Black_Tex.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Blue_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Blue_Tex.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Green_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Green_Tex.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Orange_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Orange_Tex.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Pink_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Pink_Tex.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Red_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Red_Tex.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_White_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_White_Tex.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Yellow_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Astronault_Yellow_Tex.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Props_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Textures/MainCharacter/Props_Tex.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Astrounalt_Yellow Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Astrounalt_Yellow Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/PlayerController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/death from front headshot.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/death from front headshot.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/idle aiming.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/idle aiming.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/idle crouching.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/idle crouching.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run backward left.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run backward left.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run backward right.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run backward right.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run backward.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run backward.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run forward left.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run forward left.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run forward right.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run forward right.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run forward.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run forward.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run left.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run left.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run right.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run right.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/turn 90 left.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/turn 90 left.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/turn 90 right.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/turn 90 right.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Yellow_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Yellow_Mat.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MechanicsTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MechanicsTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +139,8 @@
       <workItem from="1743167673475" duration="394000" />
       <workItem from="1743256282963" duration="6515000" />
       <workItem from="1743329292378" duration="13677000" />
-      <workItem from="1743421375101" duration="5441000" />
+      <workItem from="1743421375101" duration="6230000" />
+      <workItem from="1743520163694" duration="2193000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Components")]
     private Rigidbody _rb;
+    private Animator _animator;
     
     [Header("Movement")]
     [SerializeField] private float walkSpeed = 5f;
@@ -29,10 +30,15 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
         
         _moveAction = InputSystem.actions.FindAction("Move");
         _sprintAction = InputSystem.actions.FindAction("Sprint");
         _jumpAction = InputSystem.actions.FindAction("Jump");
+    }
+    private void Update()
+    {
+        UpdateAnimations();
     }
     private void FixedUpdate()
     {
@@ -83,6 +89,14 @@ public class PlayerController : MonoBehaviour
             return;
         
         _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    }
+    
+    private void UpdateAnimations()
+    {
+        _animator.SetBool("isMoving", _moveDirection != Vector3.zero);
+        _animator.SetBool("isJumping", !_onGround);
+        _animator.SetFloat("MoveX", GetMoveInput().x);
+        _animator.SetFloat("MoveZ", GetMoveInput().y);
     }
 
     private void CheckIsGrounded()
