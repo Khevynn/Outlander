@@ -6,6 +6,7 @@ public class BulletPool : MonoBehaviour
     public static BulletPool Instance;
     
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float nOfBulletsToSpawnAtStart;
     private List<GameObject> _availableBulletList = new List<GameObject>();
     private List<GameObject> _notAvailableBulletList = new List<GameObject>();
 
@@ -20,7 +21,7 @@ public class BulletPool : MonoBehaviour
 
     private void SpawnBullets()
     {
-        for (int i = 0; i < 10; ++i)
+        for (int i = 0; i < nOfBulletsToSpawnAtStart; ++i)
         {
             var bullet = Instantiate(bulletPrefab, transform);
             _availableBulletList.Add(bullet);
@@ -30,13 +31,13 @@ public class BulletPool : MonoBehaviour
     
     public GameObject GetBullet()
     {
-        var bullet = _availableBulletList[0];
-
-        if (!bullet)
+        if (_availableBulletList.Count <= 0)
         {
-            bullet = Instantiate(bulletPrefab, transform);
+            _availableBulletList.Add(Instantiate(bulletPrefab, transform));
         }
         
+        var bullet = _availableBulletList[0];
+
         _availableBulletList.RemoveAt(0);
         _notAvailableBulletList.Add(bullet);
         return bullet;

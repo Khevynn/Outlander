@@ -6,39 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f94f41cb-bacb-4454-ab73-771801b5df14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/PlayerController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/death from front headshot.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/death from front headshot.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/idle aiming.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/idle aiming.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/idle crouching.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/idle crouching.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/idle.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/idle.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run backward left.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run backward left.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run backward right.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run backward right.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run backward.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run backward.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run forward left.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run forward left.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run forward right.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run forward right.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run forward.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run forward.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run left.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run left.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run right.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/run right.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/turn 90 left.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/turn 90 left.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/turn 90 right.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/PlayerAnimations/turn 90 right.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Yellow_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Yellow_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MechanicsTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MechanicsTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletPool.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
@@ -54,9 +25,24 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84f0d810adef4e6c8deab33e4ae93f7c1dec00/67/61508e79/Vector3.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84f0d810adef4e6c8deab33e4ae93f7c1dec00/7b/ec211a24/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactable/InteractablesParent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/InputExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -112,13 +98,15 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17960">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="17960" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -141,6 +129,9 @@
       <workItem from="1743329292378" duration="13677000" />
       <workItem from="1743421375101" duration="6230000" />
       <workItem from="1743520163694" duration="2193000" />
+      <workItem from="1743594218391" duration="2128000" />
+      <workItem from="1743679039046" duration="678000" />
+      <workItem from="1743680770380" duration="3387000" />
     </task>
     <servers />
   </component>

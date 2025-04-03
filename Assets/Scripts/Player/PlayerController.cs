@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -9,6 +10,9 @@ public class PlayerController : MonoBehaviour
     [Header("Components")]
     private Rigidbody _rb;
     private Animator _animator;
+    
+    [Header("References")]
+    private Camera _mainCamera;
     
     [Header("Movement")]
     [SerializeField] private float walkSpeed = 5f;
@@ -20,10 +24,16 @@ public class PlayerController : MonoBehaviour
     [Header("Jumping")]
     [SerializeField] private float jumpForce = 10f;
     
+    [Header("Interaction")]
+    [SerializeField] private float interactionRange = 10f;
+    [SerializeField] private LayerMask interactionLayer;
+    private GameObject _currentHoveredInteractable;
+    
     [Header("Inputs")]
     private InputAction _moveAction;
     private InputAction _jumpAction;
     private InputAction _sprintAction;
+    private InputAction _interactAction;
     
     private bool _onGround;
 
@@ -31,10 +41,12 @@ public class PlayerController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
+        _mainCamera = Camera.main;
         
         _moveAction = InputSystem.actions.FindAction("Move");
         _sprintAction = InputSystem.actions.FindAction("Sprint");
         _jumpAction = InputSystem.actions.FindAction("Jump");
+        _interactAction = InputSystem.actions.FindAction("Interact");
     }
     private void Update()
     {
@@ -44,12 +56,13 @@ public class PlayerController : MonoBehaviour
     {
         CheckIsGrounded();
         Movement();
-
+        CheckForInteractable();
+        
+        _interactAction.performed += ctx => CallInteraction();
         if (_jumpAction.IsPressed())
         {
             Jump();
         }
-
         if (_sprintAction.IsPressed() && _onGround)
         {
             _currentMaxSpeed = sprintSpeed;
@@ -58,6 +71,35 @@ public class PlayerController : MonoBehaviour
         {
             _currentMaxSpeed = walkSpeed;
         }
+    }
+
+    private void CheckForInteractable()
+    {
+        var ray = new Ray(_mainCamera.transform.position, _mainCamera.transform.TransformDirection(Vector3.forward));
+        
+        if (!Physics.Raycast(ray, out RaycastHit hit, interactionRange, interactionLayer))
+        {
+            CallHoverExit();
+            return;
+        }
+        
+        if (_currentHoveredInteractable != hit.transform.gameObject && hit.transform.TryGetComponent(out IInteractable interactable))
+        {
+            _currentHoveredInteractable = hit.transform.gameObject;
+            CallHover(interactable);
+        }
+    }
+    private void CallHover(IInteractable interactable)
+    {
+        interactable.OnHover();
+    }
+    private void CallHoverExit()
+    {
+        if (_currentHoveredInteractable == null)
+            return;
+        
+        _currentHoveredInteractable.GetComponent<IInteractable>().OnHoverExit();
+        _currentHoveredInteractable = null;
     }
     
     private void Movement()
@@ -89,6 +131,19 @@ public class PlayerController : MonoBehaviour
             return;
         
         _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    }
+    
+    private void CallInteraction()
+    {
+        var ray = new Ray(_mainCamera.transform.position, _mainCamera.transform.TransformDirection(Vector3.forward));
+        
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, interactionRange, interactionLayer))
+        {
+            IInteractable interactable = hit.transform.gameObject.GetComponent<IInteractable>();
+            if(interactable != null)
+                interactable.Interact();
+        }
     }
     
     private void UpdateAnimations()
