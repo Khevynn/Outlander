@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class EnemyDummyStats : IDamageable
+public class EnemyDummyStats : DamageableParent
 {
     protected override void Die()
     {

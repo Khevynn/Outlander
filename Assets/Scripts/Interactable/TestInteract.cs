@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TestInteract : InteractablesParent
+public class TestInteract : InteractableParent
 {
     public override void Interact()
     {

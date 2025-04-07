@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class IDamageable : MonoBehaviour
+public class DamageableParent : MonoBehaviour
 {
     [Header("Stats")]
     public int maxHealth = 100;

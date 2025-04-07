@@ -8,6 +8,7 @@ public class GunController : MonoBehaviour
 {
     [Header("References")]
     private Camera _mainCamera;
+    private Animator _animator;
     
     [Header("Shooting")]
     [SerializeField] private GameObject firePoint;
@@ -20,9 +21,9 @@ public class GunController : MonoBehaviour
 
     private void Start()
     {
-        
         _shootAction = InputSystem.actions.FindAction("Shoot");
         _mainCamera = Camera.main;
+        _animator = GetComponent<Animator>();
         
         if (_mainCamera) 
             transform.LookAt(_mainCamera.transform.position + _mainCamera.transform.TransformDirection(Vector3.forward) * 100f);
@@ -45,6 +46,7 @@ public class GunController : MonoBehaviour
         if(_shootCurrentDelay > 0)
             return;
         
+        _animator.Play("ShootingAnim", 0, 0f);
         _shootCurrentDelay = shootMaxDelay;
         
         var ray = new Ray(_mainCamera.transform.position, GetShootingDirection());
@@ -60,7 +62,6 @@ public class GunController : MonoBehaviour
         {
             StartCoroutine(SpawnBulletTrail(ray.origin + ray.direction * 50f));
         }
-        
     }
     private Vector3 GetShootingDirection()
     {
@@ -104,7 +105,7 @@ public class GunController : MonoBehaviour
     
     private static void DealDamage(GameObject hitObject)
     {
-        if (hitObject.TryGetComponent(out IDamageable damageable))
+        if (hitObject.TryGetComponent(out DamageableParent damageable))
         {
             damageable.TakeDamage(1);
         }

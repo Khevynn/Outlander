@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class InteractablesParent : MonoBehaviour, IInteractable
+public class InteractableParent : MonoBehaviour, IInteractable
 {
     [Header("References")] 
     [SerializeField] protected MeshRenderer meshToApplyOutline;
