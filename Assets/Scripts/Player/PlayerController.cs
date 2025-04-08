@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +10,7 @@ public class PlayerController : MonoBehaviour
     
     [Header("References")]
     private Camera _mainCamera;
+    [SerializeField] private GameObject inventoryUI;
     
     [Header("Movement")]
     [SerializeField] private float walkSpeed = 5f;
@@ -31,9 +29,12 @@ public class PlayerController : MonoBehaviour
     
     [Header("Inputs")]
     private InputAction _moveAction;
+    private InputAction _lookAction;
+    private InputAction _shootAction;
     private InputAction _jumpAction;
     private InputAction _sprintAction;
     private InputAction _interactAction;
+    private InputAction _inventoryAction;
     
     private bool _onGround;
 
@@ -44,9 +45,12 @@ public class PlayerController : MonoBehaviour
         _mainCamera = Camera.main;
         
         _moveAction = InputSystem.actions.FindAction("Move");
+        _lookAction = InputSystem.actions.FindAction("Look");
+        _shootAction = InputSystem.actions.FindAction("Shoot");
         _sprintAction = InputSystem.actions.FindAction("Sprint");
         _jumpAction = InputSystem.actions.FindAction("Jump");
         _interactAction = InputSystem.actions.FindAction("Interact");
+        _inventoryAction = InputSystem.actions.FindAction("Inventory");
     }
     private void Update()
     {
@@ -54,11 +58,17 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        CheckForInputs();
         CheckIsGrounded();
-        Movement();
         CheckForInteractable();
         
+        Movement();
+    }
+
+    private void CheckForInputs()
+    {
         _interactAction.performed += ctx => CallInteraction();
+        _inventoryAction.performed += ctx => OpenOrCloseInventory();
         if (_jumpAction.IsPressed())
         {
             Jump();
@@ -73,35 +83,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void CheckForInteractable()
-    {
-        var ray = new Ray(_mainCamera.transform.position, _mainCamera.transform.TransformDirection(Vector3.forward));
-        
-        if (!Physics.Raycast(ray, out RaycastHit hit, interactionRange, interactionLayer))
-        {
-            CallHoverExit();
-            return;
-        }
-        
-        if (_currentHoveredInteractable != hit.transform.gameObject && hit.transform.TryGetComponent(out IInteractable interactable))
-        {
-            _currentHoveredInteractable = hit.transform.gameObject;
-            CallHover(interactable);
-        }
-    }
-    private void CallHover(IInteractable interactable)
-    {
-        interactable.OnHover();
-    }
-    private void CallHoverExit()
-    {
-        if (_currentHoveredInteractable == null)
-            return;
-        
-        _currentHoveredInteractable.GetComponent<IInteractable>().OnHoverExit();
-        _currentHoveredInteractable = null;
-    }
-    
     private void Movement()
     {
         _moveDirection = transform.forward * GetMoveInput().y + transform.right * GetMoveInput().x;
@@ -124,7 +105,6 @@ public class PlayerController : MonoBehaviour
             _rb.linearVelocity = new Vector3(limitedVel.x, _rb.linearVelocity.y, limitedVel.z);
         }
     }
-    
     private void Jump()
     {
         if (!_onGround)
@@ -133,6 +113,28 @@ public class PlayerController : MonoBehaviour
         _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
     
+    private void UpdateAnimations()
+    {
+        _animator.SetBool("isMoving", _moveDirection != Vector3.zero);
+        _animator.SetBool("isJumping", !_onGround);
+        _animator.SetFloat("MoveX", GetMoveInput().x);
+        _animator.SetFloat("MoveZ", GetMoveInput().y);
+    }
+    
+    private void OpenOrCloseInventory()
+    {
+        inventoryUI.SetActive(!inventoryUI.activeSelf);
+        Cursor.lockState = inventoryUI.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
+        if (inventoryUI.activeSelf)
+        {
+            DisableAllActions();
+        }
+        else
+        {
+            EnableAllActions();
+        }
+    }
+
     private void CallInteraction()
     {
         var ray = new Ray(_mainCamera.transform.position, _mainCamera.transform.TransformDirection(Vector3.forward));
@@ -145,13 +147,53 @@ public class PlayerController : MonoBehaviour
                 interactable.Interact();
         }
     }
-    
-    private void UpdateAnimations()
+    private void CheckForInteractable()
     {
-        _animator.SetBool("isMoving", _moveDirection != Vector3.zero);
-        _animator.SetBool("isJumping", !_onGround);
-        _animator.SetFloat("MoveX", GetMoveInput().x);
-        _animator.SetFloat("MoveZ", GetMoveInput().y);
+        var ray = new Ray(_mainCamera.transform.position, _mainCamera.transform.TransformDirection(Vector3.forward));
+        
+        if (!Physics.Raycast(ray, out RaycastHit hit, interactionRange, interactionLayer))
+        {
+            CallHoverExit();
+            return;
+        }
+        
+        if (_currentHoveredInteractable != hit.transform.gameObject && hit.transform.TryGetComponent(out IInteractable interactable))
+        {
+            _currentHoveredInteractable = hit.transform.gameObject;
+            CallHover(interactable);
+        }
+    }
+    
+    private void CallHover(IInteractable interactable)
+    {
+        interactable.OnHover();
+    }
+    private void CallHoverExit()
+    {
+        if (_currentHoveredInteractable == null)
+            return;
+        
+        _currentHoveredInteractable.GetComponent<IInteractable>().OnHoverExit();
+        _currentHoveredInteractable = null;
+    }
+    
+    private void EnableAllActions()
+    {
+        _moveAction.Enable();
+        _lookAction.Enable();
+        _shootAction.Enable();
+        _jumpAction.Enable();
+        _sprintAction.Enable();
+        _interactAction.Enable();
+    }
+    private void DisableAllActions()
+    {
+        _moveAction.Disable();
+        _lookAction.Disable();
+        _shootAction.Disable();
+        _jumpAction.Disable();
+        _sprintAction.Disable();
+        _interactAction.Disable();
     }
 
     private void CheckIsGrounded()
