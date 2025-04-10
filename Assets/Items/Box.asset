@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850df8c524c9fd245b936f4df7b20d24, type: 3}
+  m_Script: {fileID: 11500000, guid: 40b1f577f3e093149a03a912a6a67ee8, type: 3}
   m_Name: Box
   m_EditorClassIdentifier: 
-  _name: Box
-  _icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  _description: A box of good good
-  _isStackable: 1
-  _quantity: 0
+  itemId: 0
+  itemName: Box
+  itemDescription: Box of good good
+  maxStack: 10
+  itemIcon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}

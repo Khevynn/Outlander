@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     [Header("Interaction")]
     [SerializeField] private float interactionRange = 10f;
     [SerializeField] private LayerMask interactionLayer;
-    private GameObject _currentHoveredInteractable;
+    private GameObject _currentHoveredObj;
     
     [Header("Inputs")]
     private InputAction _moveAction;
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         CheckForInputs();
         CheckIsGrounded();
-        CheckForInteractable();
+        CheckForHoverable();
         
         Movement();
     }
@@ -142,12 +142,12 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, interactionRange, interactionLayer))
         {
-            IInteractable interactable = hit.transform.gameObject.GetComponent<IInteractable>();
-            if(interactable != null)
-                interactable.Interact();
+            IInteract interact = hit.transform.gameObject.GetComponent<IInteract>();
+            if(interact != null)
+                interact.OnInteract();
         }
     }
-    private void CheckForInteractable()
+    private void CheckForHoverable()
     {
         var ray = new Ray(_mainCamera.transform.position, _mainCamera.transform.TransformDirection(Vector3.forward));
         
@@ -157,24 +157,29 @@ public class PlayerController : MonoBehaviour
             return;
         }
         
-        if (_currentHoveredInteractable != hit.transform.gameObject && hit.transform.TryGetComponent(out IInteractable interactable))
+        if (_currentHoveredObj != hit.transform.gameObject)
         {
-            _currentHoveredInteractable = hit.transform.gameObject;
-            CallHover(interactable);
+            CallHoverExit();
+            hit.transform.TryGetComponent(out IHover hoverable);
+            if (hoverable == null)
+                return;
+            
+            _currentHoveredObj = hit.transform.gameObject;
+            CallHover(hoverable);
         }
     }
     
-    private void CallHover(IInteractable interactable)
+    private void CallHover(IHover hoverableObj)
     {
-        interactable.OnHover();
+        hoverableObj.OnHover();
     }
     private void CallHoverExit()
     {
-        if (_currentHoveredInteractable == null)
+        if (_currentHoveredObj == null)
             return;
         
-        _currentHoveredInteractable.GetComponent<IInteractable>().OnHoverExit();
-        _currentHoveredInteractable = null;
+        _currentHoveredObj.GetComponent<IHover>().OnHoverExit();
+        _currentHoveredObj = null;
     }
     
     private void EnableAllActions()

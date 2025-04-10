@@ -1,14 +1,14 @@
-using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class InteractableParent : MonoBehaviour, IInteractable
+public class Hover : MonoBehaviour, IHover
 {
     [Header("References")] 
-    [SerializeField] protected MeshRenderer meshToApplyOutline;
-    [SerializeField] protected Material interactableMaterial;
+    [SerializeField] protected Material onHoverMaterial;
+    private MeshRenderer meshToApplyOutline;
     private Material[] originalMaterials;
     private Material[] newMaterials;
-
+    
     private void Start()
     {
         if(!meshToApplyOutline) meshToApplyOutline = GetComponent<MeshRenderer>();
@@ -27,11 +27,6 @@ public class InteractableParent : MonoBehaviour, IInteractable
         meshToApplyOutline.materials = originalMaterials;
     }
     
-    public virtual void Interact()
-    {
-        // print("Interacted with " + gameObject.name);
-    }
-    
     private void SetupHoverMaterialsArray()
     {
         newMaterials = new Material[originalMaterials.Length + 1];
@@ -39,6 +34,6 @@ public class InteractableParent : MonoBehaviour, IInteractable
         {
             newMaterials[i] = originalMaterials[i];
         }
-        newMaterials[^1] = interactableMaterial;
+        newMaterials[^1] = onHoverMaterial;
     }
 }

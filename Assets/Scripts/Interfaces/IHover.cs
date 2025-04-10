@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public interface IInteractable
+public interface IHover 
 {
-    public void Interact() { }
     public void OnHover() { }
     public void OnHoverExit() { }
 }
