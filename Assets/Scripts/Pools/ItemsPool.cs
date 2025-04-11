@@ -34,6 +34,7 @@ public class ItemsPool : MonoBehaviour
         {
             Item item = Instantiate(_itemsPrefabs[i], transform.position, Quaternion.identity, transform).GetComponent<Item>();
             _availableItemsInPool.Add(item);
+            item.gameObject.SetActive(false);
         }
     }
 
@@ -54,6 +55,7 @@ public class ItemsPool : MonoBehaviour
         {
             itemToReturn = Instantiate(_itemsPrefabs[itemId], transform.position, Quaternion.identity, transform).GetComponent<Item>();
         }
+        itemToReturn.gameObject.SetActive(true);
         
         _availableItemsInPool.Remove(itemToReturn);
         _nonAvailableItemsInPool.Add(itemToReturn);
