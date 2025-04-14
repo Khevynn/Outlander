@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,10 +24,10 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private Image popupImage;
     
     [Header("Inventory")]
-    private List<ItemSlot> _itemsInInventory = new List<ItemSlot>();
-    private List<ItemSlot> _availableSlots = new List<ItemSlot>();
+    private List<StoreSlot> _itemsInInventory = new List<StoreSlot>();
+    private List<StoreSlot> _availableSlots = new List<StoreSlot>();
     
-    void Awake()
+    private void Awake()
     {
         if (Instance)
         {
@@ -36,7 +37,6 @@ public class InventoryManager : MonoBehaviour
         else
             Instance = this;
     }
-
     private void Start()
     {
         _dropArea = GameObject.FindWithTag("DropArea");
@@ -48,34 +48,106 @@ public class InventoryManager : MonoBehaviour
         CreateDefaultSlots();
     }
 
-    public void CollectItem(Item item)
+    public void CollectItem(ItemData itemData, int quantity)
     {
-        int remainingItems = item.GetAmountOfItems();
+        int remainingItems = quantity;
         for (int i = 0; i < _itemsInInventory.Count; i++)
         {
-            if (_itemsInInventory[i].ItemData.Id == item.GetItemData().Id && _itemsInInventory[i].ItemData.IsStackable)
+            if (_itemsInInventory[i].ItemData.Id == itemData.Id && itemData.IsStackable)
             {
-                _itemsInInventory[i].AddItem(item.GetAmountOfItems(), out remainingItems);
-                
-                if(remainingItems <= 0)
+                _itemsInInventory[i].AddItem(quantity, out remainingItems);
+                if (remainingItems <= 0)
                     break;
             }
         }
-        
-        if(remainingItems > 0)
-            CreateNewSlots(item.GetItemData(), remainingItems);
+
+        if (remainingItems > 0)
+            CreateNewSlots(itemData, remainingItems);
     }
-    public void DropItems(ItemSlot itemSlot)
+    public void CollectItem(Item item)
     {
-        Item itemToDrop = ItemsPool.Instance.GetItemWithId(itemSlot.ItemData.Id);
+        CollectItem(item.GetItemData(), item.GetAmountOfItems());
+    }
+    
+    public void DropItems(StoreSlot storeSlot)
+    {
+        Item itemToDrop = ItemsPool.Instance.GetItemWithId(storeSlot.ItemData.Id);
         itemToDrop.transform.position = _playerController.transform.position;
         itemToDrop.gameObject.SetActive(true);
 
-        itemToDrop.SetItemData(itemSlot.ItemData);
-        itemToDrop.SetAmountOfItems(itemSlot.Quantity);
+        itemToDrop.SetItemData(storeSlot.ItemData);
+        itemToDrop.SetAmountOfItems(storeSlot.Quantity);
 
-        _itemsInInventory.Remove(itemSlot);
-        ReturnSlotToPool(itemSlot);
+        _itemsInInventory.Remove(storeSlot);
+        ReturnSlotToPool(storeSlot);
+    }
+
+    public CraftResult CraftItem(ItemRecipe itemRecipe)
+    {
+        var result = new CraftResult();
+        bool hasAllItems = VerifyIfThePlayerHasAllItems(itemRecipe);
+        if (!hasAllItems)
+        {
+            result.ResultType = CraftResultType.MissingItems;
+            result.Message = "Missing Items!";
+            return result;
+        }
+
+        DecreaseItemsFromInventory(itemRecipe);
+        
+        CollectItem(itemRecipe.GetItemToCraft(), itemRecipe.GetAmountToCraft());
+        CompactInventoryStacks();
+        
+        result.ResultType = CraftResultType.Success;
+        result.Message = "Successfully Crafted!";
+        return result;
+    }
+    private bool VerifyIfThePlayerHasAllItems(ItemRecipe itemRecipe)
+    {
+        // Build a dictionary of available quantities by item ID
+        Dictionary<int, int> inventoryItemCounts = new();
+
+        foreach (var slot in _itemsInInventory)
+        {
+            int id = slot.ItemData.Id;
+            if (!inventoryItemCounts.ContainsKey(id))
+                inventoryItemCounts[id] = 0;
+
+            inventoryItemCounts[id] += slot.Quantity;
+        }
+
+        // Check if we have enough of each required item
+        foreach (var ingredient in itemRecipe.GetNecessaryItems())
+        {
+            int id = ingredient.itemData.Id;
+            int requiredAmount = ingredient.quantity;
+
+            if (!inventoryItemCounts.ContainsKey(id) || inventoryItemCounts[id] < requiredAmount)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+    private void DecreaseItemsFromInventory(ItemRecipe itemRecipe)
+    {
+        foreach (var ingredient in itemRecipe.GetNecessaryItems())
+        {
+            int id = ingredient.itemData.Id;
+            int remaining = ingredient.quantity;
+
+            // Find all inventory slots that match the item
+            foreach (var slot in _itemsInInventory)
+            {
+                if (slot.ItemData.Id != id)
+                    continue;
+
+                slot.DecreaseItem(remaining, out remaining);
+                if (remaining <= 0)
+                    break;
+            }
+        }
     }
 
     public void ShowOrHideItemInfoPopup(ItemData itemData)
@@ -90,10 +162,10 @@ public class InventoryManager : MonoBehaviour
     }
 
     private void CreateDefaultSlots()
-    {
+    {        
         for (int i = 0; i < 10; i++)
         {
-            var newSlot = Instantiate(itemSlotPrefab, slotsParent.transform).GetComponent<ItemSlot>();
+            var newSlot = Instantiate(itemSlotPrefab, slotsParent.transform).GetComponent<StoreSlot>();
             newSlot.gameObject.SetActive(false);
             _availableSlots.Add(newSlot);
         }
@@ -130,18 +202,66 @@ public class InventoryManager : MonoBehaviour
         _dropArea.SetActive(false);
     }
     
-    private ItemSlot GetAnAvailableSlot()
+    public void CompactInventoryStacks()
+    {
+        // Group all stackable items by their ID
+        var stackableGroups = _itemsInInventory
+            .Where(slot => slot.ItemData.IsStackable)
+            .GroupBy(slot => slot.ItemData.Id);
+
+        List<StoreSlot> newSlots = new List<StoreSlot>();
+
+        foreach (var group in stackableGroups)
+        {
+            var itemData = group.First().ItemData;
+            int totalQuantity = group.Sum(slot => slot.Quantity);
+
+            // Remove the current slots
+            foreach (var slot in group)
+            {
+                ReturnSlotToPool(slot);
+            }
+            _itemsInInventory.RemoveAll(slot => slot.ItemData.Id == itemData.Id);
+
+            // Rebuild slots using total quantity and MaxStack
+            while (totalQuantity > 0)
+            {
+                int stackAmount = Mathf.Min(totalQuantity, itemData.MaxStack);
+                var newSlot = GetAnAvailableSlot();
+                newSlot.SetItem(itemData, stackAmount);
+                newSlots.Add(newSlot);
+                totalQuantity -= stackAmount;
+            }
+        }
+
+        // Add all new compacted slots back to inventory
+        _itemsInInventory.AddRange(newSlots);
+    }
+    
+    public StoreSlot SearchItemInInventory(int necessaryItemID)
+    {
+        for(int i = 0; i < _itemsInInventory.Count; ++i)
+        {
+            if (_itemsInInventory[i].ItemData.Id == necessaryItemID)
+            {
+                return _itemsInInventory[i];
+            }
+        }
+
+        return null;
+    }
+    public StoreSlot GetAnAvailableSlot()
     {
         var slot = _availableSlots[0];
         if (slot == null)
         {
-            slot = Instantiate(itemSlotPrefab, slotsParent.transform).GetComponent<ItemSlot>();
+            slot = Instantiate(itemSlotPrefab, slotsParent.transform).GetComponent<StoreSlot>();
         }
         slot.gameObject.SetActive(true);
         _availableSlots.RemoveAt(0);
         return slot;
     }
-    private void ReturnSlotToPool(ItemSlot slot)
+    public void ReturnSlotToPool(StoreSlot slot)
     {
         slot.gameObject.SetActive(false);
         _availableSlots.Add(slot);

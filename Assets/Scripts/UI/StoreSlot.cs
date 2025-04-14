@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class StoreSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public ItemData ItemData { get; private set; }
     public int Quantity { get; private set; }
@@ -47,16 +47,37 @@ public class ItemSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void AddItem(int amount, out int outRemainingQuantity)
     {
-        if(Quantity + amount > ItemData.MaxStack)
+        int total = Quantity + amount;
+
+        if (total > ItemData.MaxStack)
         {
-            outRemainingQuantity = Quantity + amount - ItemData.MaxStack;
             Quantity = ItemData.MaxStack;
+            outRemainingQuantity = total - ItemData.MaxStack;
         }
         else
         {
-            Quantity += amount;
+            Quantity = total;
             outRemainingQuantity = 0;
         }
+
+        UpdateQuantityText();
+    }
+
+    public void DecreaseItem(int amount, out int outRemainingQuantity)
+    {
+        int remaining = Quantity - amount;
+
+        if (remaining <= 0)
+        {
+            outRemainingQuantity = -remaining; // same as (amount - Quantity)
+            InventoryManager.Instance.ReturnSlotToPool(this);
+        }
+        else
+        {
+            Quantity = remaining;
+            outRemainingQuantity = 0;
+        }
+
         UpdateQuantityText();
     }
 
