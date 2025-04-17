@@ -5,21 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f94f41cb-bacb-4454-ab73-771801b5df14" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Blue1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Blue1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Blue2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Blue2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Blue3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Blue3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Brown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Brown.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Cyan.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Cyan.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Green1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Green1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Green2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Green2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Green3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Green3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Grey1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Grey1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Grey2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Grey2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Grey3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Grey3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Grey4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Grey4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Magenta.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Magenta.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Olive.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Olive.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Orange.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Pink.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Pink.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Purple.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Purple.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_White.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gun/SciFiGunHeavy_Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gun/SciFiGunHeavy_Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/InteractableMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/InteractableMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Blue_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Blue_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Green_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Green_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Orange_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Orange_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Pink_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Pink_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Red]_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Red]_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_White_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_White_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Yellow_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Astronault_Yellow_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Props_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/MainCharacter/Props_Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/TrailMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/TrailMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders/OutlineShaderº.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders/OutlineShaderº.shadergraph.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Italic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Italic SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Box 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Box 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Box 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Box 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Box 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Box 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Box.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Box.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/BoxItem.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/BoxItem.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Recipes/Box2Recipe.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Recipes/Box2Recipe.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Recipes/Box3Recipe.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Recipes/Box3Recipe.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyDummy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyDummy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gun/SciFiGunHeavy_Black.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gun/SciFiGunHeavy_Black.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gun/SciFiGunHeavy_Blue.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gun/SciFiGunHeavy_Blue.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gun/SciFiGunHeavy_Rad.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gun/SciFiGunHeavy_Rad.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gun/SciFiGunHeavy_White.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gun/SciFiGunHeavy_White.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MechanicsTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MechanicsTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemSlot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemSlot.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Hover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Hover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/CollectableResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/CollectableResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UICollectingResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UICollectingResources.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UICraftingItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UICraftingItems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_Renderer.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +87,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IHover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -41,6 +99,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/CraftSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UICraftingItems.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@026b2a0827a4/PostProcessing/Runtime/PostProcessDebug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@9c8ceca205de/Runtime/RendererFeatures/FullScreenPassRendererFeature.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@9c8ceca205de/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -96,10 +157,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17040">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10308">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="17040" />
+      <option name="pid" value="10308" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -145,7 +206,9 @@
       <workItem from="1744555698229" duration="168000" />
       <workItem from="1744555936614" duration="58000" />
       <workItem from="1744556080882" duration="465000" />
-      <workItem from="1744585285806" duration="20966000" />
+      <workItem from="1744585285806" duration="23883000" />
+      <workItem from="1744811809796" duration="931000" />
+      <workItem from="1744886152021" duration="7014000" />
     </task>
     <servers />
   </component>

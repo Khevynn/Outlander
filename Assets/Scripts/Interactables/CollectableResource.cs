@@ -15,6 +15,7 @@ public struct DroppableItem
 public class CollectableResource : MonoBehaviour, IInteract
 {
     [Header("Resources Control")]
+    public static CollectableResource CurrentCollecting;
     [SerializeField] private List<DroppableItem> itemsToDrop;
     
     [Header("Collecting Control")]
@@ -30,7 +31,10 @@ public class CollectableResource : MonoBehaviour, IInteract
     }
     private void FixedUpdate()
     {
-        if (!_interactAction.IsPressed())
+        if (CurrentCollecting != this)
+            return;
+        
+        if (!_interactAction.IsPressed() && UICollectingResources.Instance)
         {
             _isCollecting = false;
             UICollectingResources.Instance.SetIsCollecting(false);
@@ -48,7 +52,6 @@ public class CollectableResource : MonoBehaviour, IInteract
             DropItems();
         }
         
-        
         UICollectingResources.Instance.SetCurrentHoldTimeToDrop(_currentHoldTimeToDrop);
     }
 
@@ -56,6 +59,7 @@ public class CollectableResource : MonoBehaviour, IInteract
     {
         _isCollecting = true;
         _currentHoldTimeToDrop = 0f;
+        CurrentCollecting = this;
         StartUIForCollecting();
     }
     private void DropItems()
@@ -67,7 +71,7 @@ public class CollectableResource : MonoBehaviour, IInteract
                 Item item = ItemsPool.Instance.GetItemWithId(itemsToDrop[i].itemPrefab.GetItemData().Id);
                 item.SetAmountOfItems(UnityEngine.Random.Range(itemsToDrop[i].minAmount, itemsToDrop[i].maxAmount + 1));
 
-                item.transform.position = transform.position;
+                item.transform.position = transform.position + new Vector3(0f,.5f,0f);
                 item.gameObject.SetActive(true);
             }
         }

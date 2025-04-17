@@ -11,7 +11,6 @@ public class UICollectingResources : MonoBehaviour
     [SerializeField] private GameObject collectingResourcesUI;
     [SerializeField] private Slider collectingResourcesSlider;
     
-    private bool _isCollecting = false;
     private float _maxHoldTimeToDrop = 0f;    
     private float _currentHoldTimeToDrop = 0f;    
     
@@ -26,21 +25,16 @@ public class UICollectingResources : MonoBehaviour
             Instance = this;
     }
 
-    private void FixedUpdate()
-    {
-        if (_isCollecting)
-        {
-            if(collectingResourcesUI.activeSelf == false)
-                collectingResourcesUI.SetActive(true);
-            collectingResourcesSlider.value = _currentHoldTimeToDrop / _maxHoldTimeToDrop;
-        }
-        else if(collectingResourcesUI.activeSelf == true)
-        {
-            collectingResourcesUI.SetActive(false);
-        }
-    }
-
-    public void SetIsCollecting(bool inIsCollecting) => _isCollecting = inIsCollecting;
+    public void SetIsCollecting(bool inIsCollecting)
+    { 
+        collectingResourcesUI.SetActive(inIsCollecting);
+    } 
     public void SetMaxHoldTimeToDrop(float inMaxHoldTimeToDrop) => _maxHoldTimeToDrop = inMaxHoldTimeToDrop;
-    public void SetCurrentHoldTimeToDrop(float inCurrentHoldTimeToDrop) => _currentHoldTimeToDrop = inCurrentHoldTimeToDrop;
+    public void SetCurrentHoldTimeToDrop(float inCurrentHoldTimeToDrop)
+    { 
+        _currentHoldTimeToDrop = inCurrentHoldTimeToDrop;
+
+        float value = _currentHoldTimeToDrop / _maxHoldTimeToDrop;
+        collectingResourcesSlider.value = value;
+    }
 }

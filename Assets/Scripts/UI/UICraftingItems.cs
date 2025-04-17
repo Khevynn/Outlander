@@ -52,6 +52,7 @@ public class UICraftingItems : MonoBehaviour
         else
         {
             item2Icon.sprite = noIngredientSprite;
+            item2QuantityText.text = "";
         }
         
         if (itemRecipe.GetNecessaryItems().Count >= 3)
@@ -62,6 +63,7 @@ public class UICraftingItems : MonoBehaviour
         else
         {
             item3Icon.sprite = noIngredientSprite;
+            item3QuantityText.text = "";
         }
         
         craftPopup.SetActive(true);
