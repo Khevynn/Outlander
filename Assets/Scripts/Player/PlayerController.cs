@@ -112,6 +112,11 @@ public class PlayerController : MonoBehaviour
         
         _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
+
+    public void TakeDamage(float amount)
+    {
+        print($"Took {amount} Damage");
+    }
     
     private void UpdateAnimations()
     {
