@@ -3,12 +3,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class EnemyDummyStats : DamageableParent
+public class EnemyDummyStats : EnemyHpStatsControlller
 {
-    protected override void Die()
+    public new void Die()
     {
         base.Die();
         currentHealth = maxHealth;
-        UpdateHpBarInfo();
     }
 }

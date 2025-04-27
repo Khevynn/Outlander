@@ -6,7 +6,8 @@ public enum State
     Idle,
     Patrolling,
     Pursuing,
-    Attacking
+    Attacking,
+    Fleeing
 }
 public enum StateEvent
 {
@@ -24,11 +25,13 @@ public class EnemyState
 
     [Header("References")] 
     protected NavMeshAgent Agent { get; private set; }
+    protected Animator NpcAnimator { get; private set; }
     protected GameObject NpcGameObject { get; private set; }
     protected EnemyController NpcController { get; private set; }
     protected LayerMask GroundLayer { get; private set; }
     protected Transform PlayerTransform { get; private set; }
 
+    protected EnemyHpStatsControlller StatsController;
     //Constructors
     public EnemyState()
     {
@@ -37,6 +40,9 @@ public class EnemyState
     
     public EnemyState Process()
     {
+        if (NpcController.IsDead)
+            return this;
+        
         if (CurrentEvent == StateEvent.Enter) Enter();
         if (CurrentEvent == StateEvent.Update) Update();
         if (CurrentEvent == StateEvent.Exit)
@@ -48,12 +54,31 @@ public class EnemyState
     }
     
     protected virtual void Enter() { CurrentEvent = StateEvent.Update; }
-    protected virtual void Update() {  }
+    protected virtual void Update()
+    {
+        if(Agent.hasPath)
+            TurnEnemyToTarget();
+        
+        if(Agent.velocity.magnitude >= 0.2f)
+            NpcAnimator.SetBool("isWalking", true);
+        
+        NpcAnimator.SetFloat("CurrentSpeed", Agent.speed);
+    }
     protected virtual void Exit() { CurrentEvent = StateEvent.Enter; }
     
     public void SetPlayerTransform(Transform player)
     {
         PlayerTransform = player;
+    }
+    public void SetStatsController(EnemyHpStatsControlller controller)
+    {
+        StatsController = controller;
+        StatsController.onGetHit.RemoveAllListeners();
+        StatsController.onGetHit.AddListener(OnGetHit);
+    }
+    public void SetAnimator(Animator anim)
+    {
+        NpcAnimator = anim;
     }
     public void SetNpcGameObject(GameObject npc)
     {
@@ -68,6 +93,12 @@ public class EnemyState
     public void SetGroundLayer(LayerMask layer)
     {
         GroundLayer = layer;
+    }
+
+    protected void OnGetHit()
+    {
+        if(Name == State.Idle || Name == State.Patrolling)
+            ChangeToState(new PursuingState());
     }
     
     protected bool TryToChangeState(State nextState, float chanceOfChangingState)
@@ -88,6 +119,10 @@ public class EnemyState
                 ChangeToState(new PursuingState());
                 break;
             case State.Attacking:
+                ChangeToState(new AttackingState());
+                break;
+            case State.Fleeing:
+                ChangeToState(new FleeingState());
                 break;
             default:
                 break;
@@ -98,6 +133,8 @@ public class EnemyState
     protected void ChangeToState(EnemyState state)
     {
         state.SetPlayerTransform(PlayerTransform);
+        state.SetStatsController(StatsController);
+        state.SetAnimator(NpcAnimator);
         state.SetNpcGameObject(NpcGameObject);
         state.SetNavMeshAgent(Agent);
         state.SetGroundLayer(GroundLayer);
@@ -105,12 +142,14 @@ public class EnemyState
         NextState = state;
         CurrentEvent = StateEvent.Exit;
     }
-
-    protected bool CanSeePlayer()
+    
+    protected void TurnEnemyToTarget()
     {
-        Vector3 direction = PlayerTransform.position - NpcGameObject.transform.position;
-        float angle = Vector3.Angle(direction, NpcGameObject.transform.forward);
+        Vector3 direction = Agent.pathEndPosition - NpcGameObject.transform.position; //Calculate Direction
+        direction.y = 0;
 
-        return direction.magnitude < NpcController.GetMaxVisionRange() && angle < NpcController.GetMaxVisionAngle();
+        var rotation = Quaternion.LookRotation(direction); //Gets the angle
+
+        NpcGameObject.transform.rotation = Quaternion.Slerp(NpcGameObject.transform.rotation, rotation, Time.deltaTime * 30); //Rotate towards the player
     }
 }

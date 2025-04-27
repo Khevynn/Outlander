@@ -17,29 +17,30 @@ public class PatrollingState : EnemyState
     protected override void Enter()
     {
         base.Enter();
+        Agent.speed = NpcController.GetPatrollingVelocity();
+        
         SearchWalkPoint();
-        Debug.Log("Entered Patrol State");
     }
-    protected override void Update()
+
+    protected override void Update()    
     {
         base.Update();
         if (!walkPointSet) SearchWalkPoint();
-
-        if (walkPointSet && !Agent.hasPath)
+        
+        if(walkPointSet && !Agent.hasPath)
             Agent.SetDestination(walkPoint);
         
-        if (Vector3.Distance(NpcGameObject.transform.position, walkPoint) < Agent.stoppingDistance)
+        if (NpcController.CanSeePlayer() || NpcController.isEnemyBeingCalled)
+        { 
+            ChangeToState(new PursuingState());
+        }
+        
+        if (Agent.hasPath && Vector3.Distance(NpcGameObject.transform.position, walkPoint) < Agent.stoppingDistance)
         {
             if (TryToChangeState(State.Idle, _chanceOfChangingToIdle))
                 return;
             
-            SearchWalkPoint();
             walkPointSet = false;
-        }
-
-        if (CanSeePlayer())
-        {
-            ChangeToState(new PursuingState());
         }
     }
     

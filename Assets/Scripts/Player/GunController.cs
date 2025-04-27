@@ -12,6 +12,7 @@ public class GunController : MonoBehaviour
     
     [Header("Shooting")]
     [SerializeField] private GameObject firePoint;
+    [SerializeField] private float damagePerBullet = 1f;
     [SerializeField] private float shootMaxDelay = 0.5f;
     [SerializeField] private float trailDuration = 0.5f;
     [SerializeField] private Vector3 bulletSpreadVariance;
@@ -103,11 +104,11 @@ public class GunController : MonoBehaviour
         DespawnBullet(bullet);
     }
     
-    private static void DealDamage(GameObject hitObject)
+    private void DealDamage(GameObject hitObject)
     {
-        if (hitObject.TryGetComponent(out DamageableParent damageable))
+        if (hitObject && hitObject.TryGetComponent(out IDamageable damageable))
         {
-            damageable.TakeDamage(1);
+            damageable.TakeDamage(damagePerBullet);
         }
     }
 }

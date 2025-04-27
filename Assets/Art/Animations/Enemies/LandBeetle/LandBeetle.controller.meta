@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7ddf624c3b9565043a6a67d7f7353a77
+timeCreated: 1494827823
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 90571
+  packageName: A nightmare beetle
+  packageVersion: 1.0
+  assetPath: Assets/Nightmare Beetle/Nightmare Beetle Animator Controller.controller
+  uploadId: 179957
