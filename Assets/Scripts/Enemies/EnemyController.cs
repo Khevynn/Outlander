@@ -6,7 +6,7 @@ using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 [Serializable]
-public enum EnemyType {Dogs, LandBeetles, FlyingBeetles, Spiders}
+public enum EnemyType {Dogs = 0, LandBeetles = 1, FlyingBeetles = 2, Spiders = 3}
 
 public class EnemyController : MonoBehaviour
 {
@@ -50,12 +50,15 @@ public class EnemyController : MonoBehaviour
     private GameObject generatedProjectile;
     private float _currentAttackCooldown = 0f;
 
+    private DropItemsComponent _dropItemsComponent;
+
     public bool IsDead { get; private set; }
 
     private void Start()
     {
         meshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        _dropItemsComponent = GetComponent<DropItemsComponent>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         playerStats = playerTransform.gameObject.GetComponent<PlayerStatsController>();
         
@@ -165,16 +168,25 @@ public class EnemyController : MonoBehaviour
         IsDead = true;
         
         meshAgent.ResetPath();
-        meshAgent.enabled = false;
         
         animator.SetBool("isDead", true);
+        
+        CallDropItems();
         StartCoroutine(ReturnToPool());
     }
+
+    private void CallDropItems()
+    {
+        if (!_dropItemsComponent)
+            return;
+        
+        _dropItemsComponent.DropItems();
+    }
+
     private IEnumerator ReturnToPool()
     {
         yield return new WaitForSeconds(2f);
-        meshAgent.enabled = true;
-        gameObject.SetActive(false);
+        EnemiesPool.Instance.ReturnEnemyToPool(this);
     }
     
     private void SetupCurrentState()
@@ -208,6 +220,9 @@ public class EnemyController : MonoBehaviour
     }
     public void CallGroup()
     {
+        if (IsDead)
+            return;
+        
         foreach (var enemy in currentGroup)
         {
             enemy.isEnemyBeingCalled = true;

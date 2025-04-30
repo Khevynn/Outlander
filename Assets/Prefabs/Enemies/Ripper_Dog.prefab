@@ -1892,6 +1892,7 @@ GameObject:
   - component: {fileID: 138209267053837568}
   - component: {fileID: 3637942063417294415}
   - component: {fileID: 3230719568125029404}
+  - component: {fileID: 7051644989459097341}
   m_Layer: 9
   m_Name: Ripper_Dog
   m_TagString: Untagged
@@ -2003,7 +2004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4596a53f96d537479c9df32c09566d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 5
   currentHealth: 0
   hpBar: {fileID: 1016364440245889732}
   hpText: {fileID: 5578232014219093930}
@@ -2047,6 +2048,27 @@ MonoBehaviour:
   attackDamage: 2
   attackRange: 2
   projectileSpawnLocation: {fileID: 0}
+--- !u!114 &7051644989459097341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000014115274004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34da232c2a1849d4eb700212e3ac5f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsToDrop:
+  - itemPrefab: {fileID: -3855883466955618622, guid: 1294f0013cb61e54ebabc30fd548157e, type: 3}
+    minAmount: 1
+    maxAmount: 3
+    chanceOfDropping: 55
+  - itemPrefab: {fileID: -3463488892718561164, guid: 0ef052fed16b41d40ba3a00b34948387, type: 3}
+    minAmount: 1
+    maxAmount: 2
+    chanceOfDropping: 25
 --- !u!1 &1000014194144430
 GameObject:
   m_ObjectHideFlags: 0

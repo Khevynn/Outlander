@@ -3,20 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[Serializable]
-public struct DroppableItem
-{
-    public Item itemPrefab;
-    public int minAmount;
-    public int maxAmount;
-    public float chanceOfDropping;
-}
-
 public class CollectableResource : MonoBehaviour, IInteract
 {
     [Header("Resources Control")]
     public static CollectableResource CurrentCollecting;
-    [SerializeField] private List<DroppableItem> itemsToDrop;
     
     [Header("Collecting Control")]
     [SerializeField] private float maxHoldTimeToDrop;
@@ -24,10 +14,12 @@ public class CollectableResource : MonoBehaviour, IInteract
     private bool _isCollecting;
     
     private InputAction _interactAction;
+    private DropItemsComponent _dropitemsComponent;
     
     private void Start()
     {
         _interactAction = InputSystem.actions.FindAction("Interact");
+        _dropitemsComponent = GetComponent<DropItemsComponent>();
     }
     private void FixedUpdate()
     {
@@ -49,7 +41,8 @@ public class CollectableResource : MonoBehaviour, IInteract
         if(_currentHoldTimeToDrop >= maxHoldTimeToDrop)
         {
             UICollectingResources.Instance.SetIsCollecting(false);
-            DropItems();
+            _dropitemsComponent.DropItems();
+            gameObject.SetActive(false);
         }
         
         UICollectingResources.Instance.SetCurrentHoldTimeToDrop(_currentHoldTimeToDrop);
@@ -62,22 +55,7 @@ public class CollectableResource : MonoBehaviour, IInteract
         CurrentCollecting = this;
         StartUIForCollecting();
     }
-    private void DropItems()
-    {
-        for(int i = 0; i < itemsToDrop.Count; i++)
-        {
-            if (UnityEngine.Random.Range(0f, 100f) < itemsToDrop[i].chanceOfDropping)
-            {
-                Item item = ItemsPool.Instance.GetItemWithId(itemsToDrop[i].itemPrefab.GetItemData().Id);
-                item.SetAmountOfItems(UnityEngine.Random.Range(itemsToDrop[i].minAmount, itemsToDrop[i].maxAmount + 1));
-
-                item.transform.position = transform.position + new Vector3(0f,.5f,0f);
-                item.gameObject.SetActive(true);
-            }
-        }
-        
-        gameObject.SetActive(false);
-    }
+    
     
     private void StartUIForCollecting()
     {

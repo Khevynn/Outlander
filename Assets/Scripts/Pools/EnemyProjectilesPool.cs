@@ -15,7 +15,7 @@ public class EnemyProjectilesPool : MonoBehaviour
     {
         if(Instance != null)
         {
-            Debug.Log("ItemObjectsPool already exists, destroying new one");
+            Debug.Log("EnemyProjectilesPool already exists, destroying new one");
             Destroy(this);
         }
         else

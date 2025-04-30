@@ -810,15 +810,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.751406
+      value: 0.5318661
       objectReference: {fileID: 0}
     - target: {fileID: 400098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.968
       objectReference: {fileID: 0}
     - target: {fileID: 400098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.905575
+      value: 4.354181
       objectReference: {fileID: 0}
     - target: {fileID: 400098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       propertyPath: m_LocalRotation.w
@@ -826,15 +826,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -942,6 +942,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5593470171315456580}
+    - targetCorrespondingSourceObject: {fileID: 100098, guid: 130cac6b96af6214296215324b5da188, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5601747186510659857}
   m_SourcePrefab: {fileID: 100100000, guid: 130cac6b96af6214296215324b5da188, type: 3}
 --- !u!1 &3791767614139279537 stripped
 GameObject:
@@ -1009,7 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4596a53f96d537479c9df32c09566d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 5
   currentHealth: 0
   hpBar: {fileID: 5221189033489424271}
   hpText: {fileID: 794434155755672289}
@@ -1074,6 +1077,27 @@ MonoBehaviour:
   attackDamage: 2
   attackRange: 2
   projectileSpawnLocation: {fileID: 0}
+--- !u!114 &5601747186510659857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791767614139279537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34da232c2a1849d4eb700212e3ac5f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsToDrop:
+  - itemPrefab: {fileID: -3855883466955618622, guid: 1294f0013cb61e54ebabc30fd548157e, type: 3}
+    minAmount: 1
+    maxAmount: 3
+    chanceOfDropping: 55
+  - itemPrefab: {fileID: -3463488892718561164, guid: 0ef052fed16b41d40ba3a00b34948387, type: 3}
+    minAmount: 1
+    maxAmount: 2
+    chanceOfDropping: 25
 --- !u!4 &3791767614139512145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400098, guid: 130cac6b96af6214296215324b5da188, type: 3}

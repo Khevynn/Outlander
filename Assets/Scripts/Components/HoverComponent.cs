@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class Hover : MonoBehaviour, IHover
+public class HoverComponent : MonoBehaviour, IHover
 {
     [Header("References")] 
     [SerializeField] private GameObject outlineMeshRenderer;
