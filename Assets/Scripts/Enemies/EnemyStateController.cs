@@ -31,7 +31,7 @@ public class EnemyState
     protected LayerMask GroundLayer { get; private set; }
     protected Transform PlayerTransform { get; private set; }
 
-    protected EnemyHpStatsControlller StatsController;
+    protected HealthComponent StatsController;
     //Constructors
     public EnemyState()
     {
@@ -40,7 +40,7 @@ public class EnemyState
     
     public EnemyState Process()
     {
-        if (NpcController.IsDead)
+        if (NpcController.GetIsDead() || !NpcGameObject.activeSelf)
             return this;
         
         if (CurrentEvent == StateEvent.Enter) Enter();
@@ -70,7 +70,7 @@ public class EnemyState
     {
         PlayerTransform = player;
     }
-    public void SetStatsController(EnemyHpStatsControlller controller)
+    public void SetStatsController(HealthComponent controller)
     {
         StatsController = controller;
         StatsController.onGetHit.RemoveAllListeners();

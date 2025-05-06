@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -96,7 +95,7 @@ public class GunController : MonoBehaviour
 
         while (time < trailDuration)
         {
-            bullet.transform.position = Vector3.Lerp(firePoint.transform.position, goalPosition, time / trailDuration );
+            bullet.transform.position = Vector3.Lerp(firePoint.transform.position, goalPosition, time / trailDuration * 2 );
             time += Time.deltaTime;
             
             yield return null;

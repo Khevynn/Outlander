@@ -935,9 +935,6 @@ PrefabInstance:
       addedObject: {fileID: 6288167740538847706}
     - targetCorrespondingSourceObject: {fileID: 100098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4989268974699843887}
-    - targetCorrespondingSourceObject: {fileID: 100098, guid: 130cac6b96af6214296215324b5da188, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 9088003250016565991}
     - targetCorrespondingSourceObject: {fileID: 100098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       insertIndex: -1
@@ -945,6 +942,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5601747186510659857}
+    - targetCorrespondingSourceObject: {fileID: 100098, guid: 130cac6b96af6214296215324b5da188, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5561563130082756085}
   m_SourcePrefab: {fileID: 100100000, guid: 130cac6b96af6214296215324b5da188, type: 3}
 --- !u!1 &3791767614139279537 stripped
 GameObject:
@@ -1000,26 +1000,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &4989268974699843887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3791767614139279537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4596a53f96d537479c9df32c09566d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 5
-  currentHealth: 0
-  hpBar: {fileID: 5221189033489424271}
-  hpText: {fileID: 794434155755672289}
-  hpSlider: {fileID: 4299246780017855185}
-  onGetHit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &9088003250016565991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1098,6 +1078,42 @@ MonoBehaviour:
     minAmount: 1
     maxAmount: 2
     chanceOfDropping: 25
+--- !u!114 &5561563130082756085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791767614139279537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa1bbe16f3c07b49b7b88b1554aff8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  currentHealth: 0
+  owner: 1
+  hpBar: {fileID: 5221189033489424271}
+  hpText: {fileID: 794434155755672289}
+  hpSlider: {fileID: 4299246780017855185}
+  onGetHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5593470171315456580}
+        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+        m_MethodName: CallDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &3791767614139512145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400098, guid: 130cac6b96af6214296215324b5da188, type: 3}
@@ -1211,13 +1227,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HPBar
       objectReference: {fileID: 0}
-    - target: {fileID: 7648783924027901293, guid: 6115ba86912b83147bd2ae1b9e8f9c16, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 6768967247525707769, guid: 6115ba86912b83147bd2ae1b9e8f9c16, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7648783924027901293, guid: 6115ba86912b83147bd2ae1b9e8f9c16, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648783924027901293, guid: 6115ba86912b83147bd2ae1b9e8f9c16, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

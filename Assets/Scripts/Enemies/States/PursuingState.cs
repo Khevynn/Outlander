@@ -21,6 +21,7 @@ public class PursuingState : EnemyState
         Agent.speed = NpcController.GetPursueVelocity();
         
         Agent.SetDestination(PlayerTransform.position);
+        TryCallGroup();
     }
 
     protected override void Update()

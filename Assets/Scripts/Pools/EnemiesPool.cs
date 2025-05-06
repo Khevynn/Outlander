@@ -10,6 +10,9 @@ public class EnemiesPool : MonoBehaviour
     private List<EnemyController> _availableEnemiesInPool = new List<EnemyController>();
     private List<EnemyController> _nonAvailableEnemiesInPool = new List<EnemyController>();
     
+    
+    Vector3 spawnPosition = Vector3.zero;
+    
     private void Awake()
     {
         if(Instance != null)
@@ -29,7 +32,6 @@ public class EnemiesPool : MonoBehaviour
 
     private void SpawnInitialEnemies()
     {
-        Vector3 spawnPosition = Vector3.zero;
         var ray = new Ray(transform.position, -transform.up);
         if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
@@ -62,12 +64,14 @@ public class EnemiesPool : MonoBehaviour
 
         if (!couldFindEnemy)
         {
-            enemyToReturn = Instantiate(_enemiesPrefabs[(int)type], transform.position, Quaternion.identity, transform).GetComponent<EnemyController>();
+            enemyToReturn = Instantiate(_enemiesPrefabs[(int)type], spawnPosition, Quaternion.identity, transform).GetComponent<EnemyController>();
         }
         enemyToReturn.gameObject.SetActive(true);
+        enemyToReturn.ActivateEnemy();
         
         _availableEnemiesInPool.Remove(enemyToReturn);
         _nonAvailableEnemiesInPool.Add(enemyToReturn);
+        
         return enemyToReturn;
     }
     public void ReturnEnemyToPool(EnemyController enemy)
@@ -75,6 +79,11 @@ public class EnemiesPool : MonoBehaviour
         enemy.gameObject.SetActive(false);
         _availableEnemiesInPool.Add(enemy);
         _nonAvailableEnemiesInPool.Remove(enemy);
+    }
+
+    public int GetNumberOfCurrentlyActiveEnemies()
+    {
+        return _nonAvailableEnemiesInPool.Count;
     }
     
     private void SortPrefabsById()

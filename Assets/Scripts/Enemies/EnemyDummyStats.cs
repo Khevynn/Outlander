@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class EnemyDummyStats : EnemyHpStatsControlller
+public class EnemyDummyStats : HealthComponent
 {
     public new void Die()
     {

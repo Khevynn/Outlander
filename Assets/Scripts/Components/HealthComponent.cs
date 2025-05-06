@@ -1,36 +1,43 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class EnemyHpStatsControlller : MonoBehaviour, IDamageable
+public class HealthComponent : MonoBehaviour, IDamageable
 {
-    [Header("References")] 
-    private EnemyController _enemyController;
+    [Serializable]
+    private enum ComponentOwner
+    {
+        Player,
+        Enemy
+    }
     
     [Header("Stats")] 
     [SerializeField] protected float maxHealth;
     [SerializeField] protected float currentHealth;
+    public bool IsDead { get; private set; }
     
     [Header("Hp Bar Settings")]
+    [SerializeField] private ComponentOwner owner;
     [SerializeField] protected Transform hpBar;
     [SerializeField] protected TMP_Text hpText;
     public Slider hpSlider;
     
     public UnityEvent onGetHit;
+    public UnityEvent onDie;
     private Transform _playerTransform;
     
     public void Start()
     {
-        _enemyController = GetComponent<EnemyController>();
         _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         currentHealth = maxHealth;
         UpdateHpBarInfo();
     }
     private void FixedUpdate()
     {
-        UpdateHpBarRotation();
+        if(owner == ComponentOwner.Enemy)
+            UpdateHpBarRotation();
     }
 
     private void UpdateHpBarInfo()
@@ -51,8 +58,11 @@ public class EnemyHpStatsControlller : MonoBehaviour, IDamageable
 
     public void TakeDamage(float amount)
     {
-        currentHealth -= amount;
         if (currentHealth <= 0)
+            return;
+        
+        
+        if (currentHealth - amount <= 0)
         {
             currentHealth = 0;
             UpdateHpBarInfo();
@@ -60,12 +70,20 @@ public class EnemyHpStatsControlller : MonoBehaviour, IDamageable
             return;
         }
         
+        currentHealth -= amount;
         UpdateHpBarInfo();
         onGetHit.Invoke();
     }
     public void Die()
     {
-        _enemyController.CallDeath();
+        IsDead = true;
+        onDie.Invoke();
+    }
+    public void Revive()
+    {
+        IsDead = false;
+        currentHealth = maxHealth;
+        UpdateHpBarInfo();
     }
 
     public float GetMaxHealth()
