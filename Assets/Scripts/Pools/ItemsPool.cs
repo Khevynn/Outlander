@@ -63,6 +63,7 @@ public class ItemsPool : MonoBehaviour
     }
     public void ReturnItemToPool(Item item)
     {
+        item.gameObject.SetActive(false);
         _availableItemsInPool.Add(item);
         _nonAvailableItemsInPool.Remove(item);
     }

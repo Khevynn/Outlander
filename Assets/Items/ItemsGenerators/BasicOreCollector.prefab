@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2203464880879834691}
   - component: {fileID: 5407041140572153749}
   - component: {fileID: 4119696171992172223}
+  - component: {fileID: 1777499738778104646}
   m_Layer: 3
   m_Name: BasicOreCollector
   m_TagString: Untagged
@@ -124,11 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ea495ea7c86bb41920cc26471d2926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsToDrop:
-  - itemPrefab: {fileID: -3855883466955618622, guid: 1294f0013cb61e54ebabc30fd548157e, type: 3}
-    minAmount: 5
-    maxAmount: 10
-    chanceOfDropping: 100
   maxHoldTimeToDrop: 2
 --- !u!114 &4119696171992172223
 MonoBehaviour:
@@ -143,6 +139,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMeshRenderer: {fileID: 4638203153457201671}
+--- !u!114 &1777499738778104646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8536292191768944264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34da232c2a1849d4eb700212e3ac5f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsToDrop:
+  - itemPrefab: {fileID: -3855883466955618622, guid: 1294f0013cb61e54ebabc30fd548157e, type: 3}
+    minAmount: 5
+    maxAmount: 5
+    chanceOfDropping: 100
 --- !u!1001 &3944783123377649052
 PrefabInstance:
   m_ObjectHideFlags: 0

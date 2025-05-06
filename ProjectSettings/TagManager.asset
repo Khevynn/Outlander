@@ -15,9 +15,9 @@ TagManager:
   - UI
   - NotRender
   - Collectable
-  - 
-  - 
-  - 
+  - Ground
+  - Enemy
+  - Player
   - 
   - 
   - 

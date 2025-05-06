@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8048653267756644411}
   - component: {fileID: 791087065472191964}
   - component: {fileID: 6401049589155109294}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 001 - Intermediate Ore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: -1592311429191767466}
   - component: {fileID: -3463488892718561164}
   - component: {fileID: 759311242166149105}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 001 - Intermediate Ore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
