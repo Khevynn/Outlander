@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [Header("References")]
     private Camera _mainCamera;
     [SerializeField] private GameObject inventoryUI;
+    [SerializeField] private GameObject pauseMenuUI;
     
     [Header("Movement")]
     [SerializeField] private float walkSpeed = 5f;
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private InputAction _sprintAction;
     private InputAction _interactAction;
     private InputAction _inventoryAction;
+    private InputAction _pauseAction;
     
     private bool _onGround;
 
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
         _jumpAction = InputSystem.actions.FindAction("Jump");
         _interactAction = InputSystem.actions.FindAction("Interact");
         _inventoryAction = InputSystem.actions.FindAction("Inventory");
+        _pauseAction = InputSystem.actions.FindAction("Pause");
     }
     private void Update()
     {
@@ -69,6 +72,7 @@ public class PlayerController : MonoBehaviour
     {
         _interactAction.performed += ctx => CallInteraction();
         _inventoryAction.performed += ctx => OpenOrCloseInventory();
+        _pauseAction.performed += ctx => PauseOrUnpauseGame();
         if (_jumpAction.IsPressed())
         {
             Jump();
@@ -137,6 +141,22 @@ public class PlayerController : MonoBehaviour
         else
         {
             EnableAllActions();
+        }
+    }
+    public void PauseOrUnpauseGame()
+    {
+        inventoryUI.SetActive(false);
+        pauseMenuUI.SetActive(!pauseMenuUI.activeSelf);
+        Cursor.lockState = pauseMenuUI.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
+        if (pauseMenuUI.activeSelf)
+        {
+            DisableAllActions();
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            EnableAllActions();
+            Time.timeScale = 1f;
         }
     }
 

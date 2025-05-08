@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BulletPool : MonoBehaviour
 {
-    public static BulletPool Instance;
+    public static BulletPool Instance { get; private set; }
     
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float nOfBulletsToSpawnAtStart;

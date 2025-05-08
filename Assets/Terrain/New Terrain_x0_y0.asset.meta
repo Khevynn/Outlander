@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: edb0f053bef83cb468c703618f9f71d5
+labels:
+- Mars
+- Landscape
+timeCreated: 1434219867
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49808
+  packageName: Mars Landscape
+  packageVersion: 1.0
+  assetPath: Assets/Mars Landscape/Terrain/New Terrain_x0_y0.asset
+  uploadId: 89512

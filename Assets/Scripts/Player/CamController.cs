@@ -39,7 +39,7 @@ public class CamController : MonoBehaviour
         _xRotation = Mathf.Clamp(_xRotation, minY, maxY);
 
         transform.rotation = Quaternion.Euler(_xRotation,_yRotation, 0f);
-        player.rotation = Quaternion.Euler(0f, _yRotation, 0f);
+        player.rotation = Quaternion.Euler(0f, _yRotation + 20f, 0f);
     }
     private Vector2 GetLookInput()
     {

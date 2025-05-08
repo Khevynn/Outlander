@@ -17,7 +17,7 @@ public class StormManager : MonoBehaviour
         public float FlyingBeetle;
     }
 
-    public static StormManager Instance;
+    public static StormManager Instance { get; private set; }
 
     #region References
     [Header("References")] 

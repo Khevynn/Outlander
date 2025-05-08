@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 154b8d4c5deb0f54ea91e550c9a5789c
+labels:
+- Mars
+- Landscape
+timeCreated: 1434222664
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49808
+  packageName: Mars Landscape
+  packageVersion: 1.0
+  assetPath: Assets/Mars Landscape/Textures/Mars Skybox.mat
+  uploadId: 89512

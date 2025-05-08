@@ -5,31 +5,167 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f94f41cb-bacb-4454-ab73-771801b5df14" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/HeightmapTexture.preset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/HeightmapTexture.preset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/canyon01.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/canyon01.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/canyon02.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/canyon02.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/canyon03.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/canyon03.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/canyon04.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/canyon04.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/canyon05.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/canyon05.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/clouds.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/clouds.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/cracked_earth01.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/cracked_earth01.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/cracked_earth02.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/cracked_earth02.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/errosion01.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/errosion01.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/flat_mountain01.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/flat_mountain01.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/island01.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/island01.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain01.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain01.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain02.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain02.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain03.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain03.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain04.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain04.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain05.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain05.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain06.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain06.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain07.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain07.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain08.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/mountain08.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/plateau01.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/plateau01.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/plateau02.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/plateau02.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/plateau03.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/plateau03.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/rolling_hills01.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/rolling_hills01.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/soft_peaks01.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/soft_peaks01.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/white_square.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Heightmaps/white_square.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Noise_Soft_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Noise_Soft_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Soft_Round_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Soft_Round_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Canyon01_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Canyon01_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Canyon02_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Canyon02_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Canyon03_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Canyon03_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Canyon04_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Canyon04_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Canyon05_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Canyon05_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Crackedground01_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Crackedground01_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Crackedground02_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Crackedground02_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Flatmountain01_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Flatmountain01_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Hills01_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Hills01_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Island01_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Island01_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain01_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain01_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain02_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain02_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain03_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain03_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain04_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain04_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain05_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain05_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain06_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain06_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain07_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain07_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain08_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Mountain08_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Plateau01_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Plateau01_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Plateau02_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Plateau02_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Plateau03_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Plateau03_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Slope02_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Slope02_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Slope03_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Slope03_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Slope04_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Slope04_Brush.brush.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Softpeaks01_Brush.brush" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/Brushes/Terrainstamp_Softpeaks01_Brush.brush.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Green1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Gridbox/Prototype_512x512_Green1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders/SimpleToon/Shader/ToonLightBase.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Shaders/SimpleToon/Shader/ToonLightBase.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Blocked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Blocked.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Crosshair.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Crosshair.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Bold Italic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Bold Italic SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Italic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Italic SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/000 - BasicOre.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Prefabs/000 - BasicOre.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/001 - Intermediate Ore.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Prefabs/001 - Intermediate Ore.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/FlyingBeetle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/FlyingBeetle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/LandBeetle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/LandBeetle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Ripper_Dog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Ripper_Dog.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Spider.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Spider.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gun/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gun/Projectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pools/ItemsPool.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Pools/ItemsPool.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EnemiesTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EnemiesTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyDummyStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyDummyStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHpStatsControlller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHpStatsControlller.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyStateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/States/PursuingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/States/PursuingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/GunController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/GunController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/EnemiesPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pools/EnemiesPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/ItemsIcons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/ItemsIcons/BasicOreIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/ItemsIcons/BasicOreIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/ItemsIcons/IntermediateOreIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/ItemsIcons/IntermediateOreIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Transparent_X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Transparent_X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Main Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/MainCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EnemiesTest.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EnemiesTest.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EnemiesTest.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EnemiesTest/NavMesh-NavMesh 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EnemiesTest/NavMesh-NavMesh 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EnemiesTest/NavMesh-NavMesh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EnemiesTest/NavMesh-NavMesh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MechanicsTest.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MechanicsTest.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CamController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CamController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/BulletPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pools/BulletPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StormControlling/StormManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StormControlling/StormManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CraftSlot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CraftSlot.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryTabsSwitcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InventoryTabsSwitcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/StoreSlot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/StoreSlot.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UICollectingResources.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UICollectingResources.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UICraftingItems.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UICraftingItems.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +182,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ec1dd27642a4f828b7ef1362e252f983e000/89/623876b1/Graph.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e3f22de68704a8c9889661f7a6d794c4400/5a/145c0b3c/NativeInputSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/314938d17f3848e8ac683e11b27f62ee46ae00/2c/10e68d26/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/844019a3a067481c8d9cb70c7a2ba4471df600/18/ee13dd3b/Application.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/844019a3a067481c8d9cb70c7a2ba4471df600/3a/745aad5d/Ray.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/844019a3a067481c8d9cb70c7a2ba4471df600/49/40a6af34/Time.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/844019a3a067481c8d9cb70c7a2ba4471df600/d5/764630e2/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/844019a3a067481c8d9cb70c7a2ba4471df600/f1/27e90311/Resolution.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/844019a3a067481c8d9cb70c7a2ba4471df600/fc/ae74216b/SetupCoroutine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a3cc2668891e49a2857d06e68d8a076a11200/33/1a7ab838/NavMeshAgent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ecd69357943c47f39fb8fa70af4067a92ac00/99/cf9b33d9/Physics.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,6 +196,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/States/AttackingState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/States/PursuingState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IHover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -67,12 +206,16 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerStatsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pools/EnemiesPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pools/EnemyProjectilesPool.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/CraftSlot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UICraftingItems.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveSystem/Save.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menus/GameSettingsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menus/MainMenuController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menus/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menus/VideoSettingsPopup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@026b2a0827a4/PostProcessing/Runtime/PostProcessDebug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@9c8ceca205de/Runtime/RendererFeatures/FullScreenPassRendererFeature.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@9c8ceca205de/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f3fac7af1578/Runtime/UGUI/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f3fac7af1578/Runtime/UGUI/UI/Core/Mask.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -88,7 +231,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Enemies&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -100,6 +243,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Builds\Outlander.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\khevy\Desktop\Builds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.45f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\Unity Projects\Outlander&quot; -debugCodeOptimization" />
@@ -197,6 +348,7 @@
       <workItem from="1746523446479" duration="620000" />
       <workItem from="1746526643030" duration="14000" />
       <workItem from="1746527049863" duration="2171000" />
+      <workItem from="1746700691362" duration="1019000" />
     </task>
     <servers />
   </component>

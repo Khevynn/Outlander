@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7d56578d45fda684f942547273ae673e
+timeCreated: 1447271878
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49808
+  packageName: Mars Landscape
+  packageVersion: 1.0
+  assetPath: Assets/Mars Landscape/Textures/Materials/Rock.mat
+  uploadId: 89512
