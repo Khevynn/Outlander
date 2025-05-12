@@ -10,7 +10,7 @@ Shader "Lpk/LightModel/ToonGlassInside"
         _ShadowStepSmooth   ("ShadowStepSmooth", Range(0, 1))     = 0.04
 
         [Space]
-        _Transparency       ("Transparency", Range(0.0, 1.0))     = 0.2
+        _MainAlpha       ("Main Alpha", Range(0.0, 1.0))     = 0.2
 
         [Space]   
         _OutlineWidth       ("OutlineWidth", Range(0.0, 1.0))      = 0.15
@@ -143,7 +143,7 @@ Shader "Lpk/LightModel/ToonGlassInside"
             Name "Outline"
             Tags { "LightMode" = "SRPDefaultUnlit" }
             Cull Off
-            ZWrite On
+            ZWrite Off
             Blend SrcAlpha OneMinusSrcAlpha
 
             HLSLPROGRAM

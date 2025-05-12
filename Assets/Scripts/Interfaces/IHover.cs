@@ -2,6 +2,6 @@ using UnityEngine;
 
 public interface IHover 
 {
-    public void OnHover() { }
+    public void OnHoverEnter() { }
     public void OnHoverExit() { }
 }

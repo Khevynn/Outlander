@@ -15,12 +15,13 @@ GameObject:
   - component: {fileID: 274456727276425288}
   - component: {fileID: 1983772537893620137}
   - component: {fileID: 2837490158250134455}
-  m_Layer: 0
+  - component: {fileID: 1691433600216738194}
+  m_Layer: 2
   m_Name: Dome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8762617220175334174
 Transform:
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 45, y: 45, z: 45}
+  m_LocalScale: {x: 300, y: 300, z: 300}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -2189,7 +2190,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 120
+  m_VersionIndex: 129
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2286,7 +2287,7 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1023
+    m_Bits: 991
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -2307,5 +2308,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c592fbd23c48f234c8f5c47533b85cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxDurationOfDome: 120
   timeBetweenDamage: 1
   damageAmount: 5
+--- !u!114 &1691433600216738194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8833999728891811430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed88bbea456e9473fa8c1a5c334bb5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roundness: 1
+  falloff: 0

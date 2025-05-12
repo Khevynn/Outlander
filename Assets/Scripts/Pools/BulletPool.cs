@@ -8,7 +8,7 @@ public class BulletPool : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float nOfBulletsToSpawnAtStart;
     private List<GameObject> _availableBulletList = new List<GameObject>();
-    private List<GameObject> _notAvailableBulletList = new List<GameObject>();
+    private List<GameObject> _nonAvailableBulletList = new List<GameObject>();
 
     private void Awake()
     {
@@ -39,12 +39,12 @@ public class BulletPool : MonoBehaviour
         var bullet = _availableBulletList[0];
 
         _availableBulletList.RemoveAt(0);
-        _notAvailableBulletList.Add(bullet);
+        _nonAvailableBulletList.Add(bullet);
         return bullet;
     }
     public void ReturnBullet(GameObject bullet)
     {
-        _notAvailableBulletList.Remove(bullet);
+        _nonAvailableBulletList.Remove(bullet);
         _availableBulletList.Add(bullet);
     }
 }

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8281097446151741785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7099866641496951491}
+  m_Layer: 9
+  m_Name: DamagePopupSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7099866641496951491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8281097446151741785}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.719, y: 2.494, z: 0.783}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9045101095295323990}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1201495315588905152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -837,6 +868,14 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9026594948797858511, guid: 2e842955dc1cffe4da143b2735d5e9fd, type: 3}
+      propertyPath: m_Quality
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026594948797858511, guid: 2e842955dc1cffe4da143b2735d5e9fd, type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026594948797858511, guid: 2e842955dc1cffe4da143b2735d5e9fd, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 16a4948672a41114eaf141c2e1b6f156, type: 2}
@@ -859,6 +898,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2e842955dc1cffe4da143b2735d5e9fd, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 7099866641496951491}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2e842955dc1cffe4da143b2735d5e9fd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3237498709917007334}
@@ -885,6 +927,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: -2927287377143918111}
   m_SourcePrefab: {fileID: 100100000, guid: 2e842955dc1cffe4da143b2735d5e9fd, type: 3}
+--- !u!137 &524940658906032754 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 9026594948797858511, guid: 2e842955dc1cffe4da143b2735d5e9fd, type: 3}
+  m_PrefabInstance: {fileID: 8794438225267419325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8560629486627018220 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e842955dc1cffe4da143b2735d5e9fd, type: 3}
@@ -974,7 +1021,7 @@ NavMeshAgent:
   m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -996,9 +1043,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshAgent: {fileID: 0}
   animator: {fileID: 0}
+  enemyCollider: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  meshRenderers:
+  - {fileID: 524940658906032754}
+  hitEffectColor: {r: 1, g: 0.061194833, b: 0, a: 1}
+  hitEffectDuration: 0.1
+  hitEffectMultiplier: 10
   enemyType: 2
   isGroupable: 0
   isEnemyBeingCalled: 0
@@ -1059,7 +1112,19 @@ MonoBehaviour:
   hpSlider: {fileID: 6859397866127550648}
   onGetHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7365720444365415668}
+        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+        m_MethodName: PlayHitEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDie:
     m_PersistentCalls:
       m_Calls:

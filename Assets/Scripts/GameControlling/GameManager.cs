@@ -28,6 +28,22 @@ public class GameManager : MonoBehaviour
         currentVideoSettings = SaveManager.savedGame.GetSavedVideoSettings();
     }
 
+    public void Win()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        SceneLoader.Instance.LoadScene("WinMenu");
+    }
+    public void Lose()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        SceneLoader.Instance.LoadScene("LostMenu");
+    }
+    public void BackToMainMenu()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        SceneLoader.Instance.LoadScene("StartMenu");
+    }
+    
     public void SaveVideoSettings(VideoSettings settings)
     {
         currentVideoSettings = settings;

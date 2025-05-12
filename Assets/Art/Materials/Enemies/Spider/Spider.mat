@@ -17,7 +17,7 @@ Material:
   - _NORMALMAP
   - _SPECULAR_COLOR
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -41,6 +41,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: d54280bc64c249e49811bcb80f687fb7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -72,11 +76,11 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _GlossinessSource: 0
-    - _OutlineWidth: 1
+    - _OutlineWidth: 0.05
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimStep: 0
-    - _RimStepSmooth: 0
+    - _RimStep: 0.107
+    - _RimStepSmooth: 0.914
     - _ShadowStep: 0.5
     - _ShadowStepSmooth: 0.308
     - _Shininess: 0.48113528

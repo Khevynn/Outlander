@@ -23,9 +23,6 @@ public class VideoSettingsPopup : MonoBehaviour
         SetupGraphicsDropdown();
         SetDropdownDefaultValues();
     }
-    private void OnEnable()
-    {
-    }
 
     public void CallApplySettings()
     {

@@ -93,13 +93,24 @@ public class GunController : MonoBehaviour
         bullet.transform.LookAt(goalPosition);
         bullet.SetActive(true);
 
+        Vector3 start = firePoint.transform.position;
+    
         while (time < trailDuration)
         {
-            bullet.transform.position = Vector3.Lerp(firePoint.transform.position, goalPosition, time / trailDuration * 2 );
+            bullet.transform.position = Vector3.Lerp(start, goalPosition, time / trailDuration);
             time += Time.deltaTime;
-            
             yield return null;
         }
+
+        bullet.transform.position = goalPosition;
+
+        // If you have a HitFX on the bullet
+        if (bullet.TryGetComponent(out ParticleSystem hitFx))
+        {
+            hitFx.Play();
+            yield return new WaitWhile(() => hitFx.isPlaying);
+        }
+
         DespawnBullet(bullet);
     }
     

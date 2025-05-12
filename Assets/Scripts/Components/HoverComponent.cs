@@ -6,7 +6,7 @@ public class HoverComponent : MonoBehaviour, IHover
     [Header("References")] 
     [SerializeField] private GameObject outlineMeshRenderer;
     
-    public virtual void OnHover()
+    public virtual void OnHoverEnter()
     {
         outlineMeshRenderer.SetActive(true);
     }

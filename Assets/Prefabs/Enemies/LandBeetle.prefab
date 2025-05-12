@@ -8055,6 +8055,7 @@ Transform:
   m_LocalScale: {x: 0.58457, y: 0.58457, z: 0.58457}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2709060422487899590}
   - {fileID: 4767679132218902}
   - {fileID: 4269789436901048}
   - {fileID: 2079595406630584}
@@ -8167,9 +8168,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshAgent: {fileID: 0}
   animator: {fileID: 0}
+  enemyCollider: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  meshRenderers:
+  - {fileID: 137982961112388336}
+  - {fileID: 137343886551676448}
+  - {fileID: 137357072899195546}
+  - {fileID: 137641728929783266}
+  - {fileID: 137591046875715346}
+  - {fileID: 137428511506626794}
+  - {fileID: 137990594417713932}
+  - {fileID: 137662305695525262}
+  - {fileID: 137683720390875772}
+  - {fileID: 137987478222909200}
+  - {fileID: 137624936670518286}
+  - {fileID: 137422170847028396}
+  - {fileID: 137380873821501884}
+  - {fileID: 137372938092123220}
+  - {fileID: 137496630134003972}
+  - {fileID: 137249899460784670}
+  - {fileID: 137399463733955566}
+  - {fileID: 137370234296431284}
+  - {fileID: 137090417560226540}
+  - {fileID: 137418862809510038}
+  - {fileID: 137194491231895846}
+  - {fileID: 137659968448749896}
+  - {fileID: 137992128368358196}
+  - {fileID: 137338531068644880}
+  - {fileID: 137355613001518050}
+  - {fileID: 137818584565712486}
+  - {fileID: 137318985001334608}
+  - {fileID: 137672861818680810}
+  - {fileID: 137436758063534240}
+  - {fileID: 137949662114949778}
+  - {fileID: 137525003527723066}
+  hitEffectColor: {r: 1, g: 0.0627451, b: 0, a: 1}
+  hitEffectDuration: 0.1
+  hitEffectMultiplier: 10
+  damagePopupSpawn: {fileID: 2709060422487899590}
   enemyType: 1
   isGroupable: 0
   isEnemyBeingCalled: 0
@@ -8230,7 +8268,19 @@ MonoBehaviour:
   hpSlider: {fileID: 7855956810852022455}
   onGetHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7760858116199102039}
+        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+        m_MethodName: PlayHitEffect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDie:
     m_PersistentCalls:
       m_Calls:
@@ -8272,6 +8322,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.85, z: 0.718}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4782747046613586}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6457106164294525432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2709060422487899590}
+  m_Layer: 9
+  m_Name: DamagePopupSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2709060422487899590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457106164294525432}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.7189999, y: 1.875, z: 0.783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

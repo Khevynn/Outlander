@@ -168,12 +168,17 @@ Shader "Lpk/LightModel/ToonLightBase"
             ENDHLSL
         }
 
-        // Outline Pass
+        UsePass "Universal Render Pipeline/Lit/ShadowCaster"
+
         Pass
         {
             Name "Outline"
-            Cull Front
             Tags { "LightMode" = "SRPDefaultUnlit" }
+
+            Cull Front
+            ZWrite Off
+            ColorMask 0   // Prevents any color output
+            ZTest LEqual  // Ensures it doesn't interfere with depth testing
 
             HLSLPROGRAM
             #pragma vertex vert
@@ -200,7 +205,6 @@ Shader "Lpk/LightModel/ToonLightBase"
             v2f vert(appdata v)
             {
                 v2f o;
-                VertexPositionInputs vertexInput = GetVertexPositionInputs(v.vertex.xyz);
                 float3 norm = normalize(v.normal);
                 float3 offset = norm * _OutlineWidth * 0.1;
                 float3 displaced = v.vertex.xyz + offset;
@@ -211,12 +215,10 @@ Shader "Lpk/LightModel/ToonLightBase"
 
             float4 frag(v2f i) : SV_Target
             {
-                float3 color = MixFog(_OutlineColor.rgb, i.fogCoord);
-                return float4(color, _OutlineColor.a);
+                discard; // No actual fragment drawn
+                return float4(0, 0, 0, 0);
             }
             ENDHLSL
         }
-
-        UsePass "Universal Render Pipeline/Lit/ShadowCaster"
     }
 }

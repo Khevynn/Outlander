@@ -73,7 +73,6 @@ public class EnemyState
     public void SetStatsController(HealthComponent controller)
     {
         StatsController = controller;
-        StatsController.onGetHit.RemoveAllListeners();
         StatsController.onGetHit.AddListener(OnGetHit);
     }
     public void SetAnimator(Animator anim)

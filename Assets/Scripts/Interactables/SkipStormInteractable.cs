@@ -4,6 +4,6 @@ public class SkipStormInteractable : MonoBehaviour, IInteract
 {
     public void OnInteract()
     {
-        StormManager.Instance.SkipStorm();
+        StormManager.Instance.CallSkipStorm();
     }
 }

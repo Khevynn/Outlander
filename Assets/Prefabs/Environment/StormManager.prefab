@@ -45,12 +45,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stormProfile: {fileID: 11400000, guid: 5d3ba640c6706074494d360d33827c16, type: 2}
-  maxTimeBetweenStorms: 5
+  maxTimeBetweenStorms: 10
+  maxTimeToSkipStorm: 30
   timeToStartStorm: 60
   timeToFinishStorm: 40
   maxStormDuration: 50
+  groupSizes:
+  - type: 0
+    min: 1
+    max: 3
+    minimumWavesToSpawn: 0
+  - type: 1
+    min: 1
+    max: 1
+    minimumWavesToSpawn: 0
+  - type: 2
+    min: 1
+    max: 2
+    minimumWavesToSpawn: 0
+  - type: 3
+    min: 5
+    max: 10
+    minimumWavesToSpawn: 0
+  numberOfWavesToSpawnIfSkipped: 2
   timeBetweenWaves: 10
   maxActiveEnemies: 50
+  spawnRadius: 20
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  minWaveForDogs: 0
+  minWaveForSpiders: 2
+  minWaveForLandBeetles: 5
+  minWaveForFlyingBeetles: 3
   currentWave: 0
-  baseEnemiesPerWave: 3
-  enemyGrowthRate: 1.15
+  baseEnemiesPerWave: 5
+  enemyGrowthRate: 1.25

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &736078273926976626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 430169448752066554}
+  m_Layer: 9
+  m_Name: DamagePopupSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &430169448752066554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736078273926976626}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.82, y: 5, z: 1.26}
+  m_LocalScale: {x: 5.8457, y: 5.8457, z: 5.8457}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3791767614139512145}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3791767614139379635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -924,6 +955,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 400098, guid: 130cac6b96af6214296215324b5da188, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 430169448752066554}
+    - targetCorrespondingSourceObject: {fileID: 400098, guid: 130cac6b96af6214296215324b5da188, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5221189033489424271}
     m_AddedComponents:
@@ -946,6 +980,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5561563130082756085}
   m_SourcePrefab: {fileID: 100100000, guid: 130cac6b96af6214296215324b5da188, type: 3}
+--- !u!137 &3791767614134068243 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13700000, guid: 130cac6b96af6214296215324b5da188, type: 3}
+  m_PrefabInstance: {fileID: 3791767614139379635}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3791767614139279537 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100098, guid: 130cac6b96af6214296215324b5da188, type: 3}
@@ -1035,9 +1074,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshAgent: {fileID: 0}
   animator: {fileID: 0}
+  enemyCollider: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  meshRenderers:
+  - {fileID: 3791767614134068243}
+  hitEffectColor: {r: 1, g: 0.0627451, b: 0, a: 1}
+  hitEffectDuration: 0.1
+  hitEffectMultiplier: 10
+  damagePopupSpawn: {fileID: 430169448752066554}
   enemyType: 3
   isGroupable: 1
   isEnemyBeingCalled: 0
@@ -1098,7 +1144,19 @@ MonoBehaviour:
   hpSlider: {fileID: 4299246780017855185}
   onGetHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5593470171315456580}
+        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+        m_MethodName: PlayHitEffect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDie:
     m_PersistentCalls:
       m_Calls:

@@ -61,7 +61,6 @@ public class HealthComponent : MonoBehaviour, IDamageable
         if (currentHealth <= 0)
             return;
         
-        
         if (currentHealth - amount <= 0)
         {
             currentHealth = 0;
@@ -72,6 +71,13 @@ public class HealthComponent : MonoBehaviour, IDamageable
         
         currentHealth -= amount;
         UpdateHpBarInfo();
+
+        if (owner == ComponentOwner.Player)
+        {
+            CamController.Instance.ShakeCamera(.2f, .1f);
+            InGamePopupsController.Instance.CallDamageAlert(.2f);
+        }
+        
         onGetHit.Invoke();
     }
     public void Die()

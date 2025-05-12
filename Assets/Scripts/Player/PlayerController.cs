@@ -1,6 +1,7 @@
-using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     
     [Header("References")]
     private Camera _mainCamera;
+    private CamController camController;
     [SerializeField] private GameObject inventoryUI;
     [SerializeField] private GameObject pauseMenuUI;
     
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
         _mainCamera = Camera.main;
+        camController = _mainCamera.transform.parent.GetComponent<CamController>();
         
         _moveAction = InputSystem.actions.FindAction("Move");
         _lookAction = InputSystem.actions.FindAction("Look");
@@ -90,12 +93,14 @@ public class PlayerController : MonoBehaviour
     private void Movement()
     {
         _moveDirection = transform.forward * GetMoveInput().y + transform.right * GetMoveInput().x;
-        _rb.AddForce(_moveDirection.normalized * (_currentMaxSpeed * 10), ForceMode.Force);
-        
-        if(_onGround)
-            _rb.linearDamping = groundLinearDamping;
-        else
-            _rb.linearDamping = 0;
+
+        // Rotate direction 20 degrees around Y axis to fit with the camera direction
+        Quaternion rotation = Quaternion.AngleAxis(-20f, Vector3.up);
+        Vector3 rotatedDirection = rotation * _moveDirection.normalized;
+
+        _rb.AddForce(rotatedDirection * (_currentMaxSpeed * 10f), ForceMode.Force);
+
+        _rb.linearDamping = _onGround ? groundLinearDamping : 0f;
         
         LimitVelocity();
     }
@@ -115,11 +120,6 @@ public class PlayerController : MonoBehaviour
             return;
         
         _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-    }
-
-    public void TakeDamage(float amount)
-    {
-        print($"Took {amount} Damage");
     }
     
     private void UpdateAnimations()
@@ -159,6 +159,12 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
+    public void BackToMainMenu()
+    {
+        EnableAllActions();
+        Time.timeScale = 1f;
+        GameManager.Instance.BackToMainMenu();
+    }
 
     private void CallInteraction()
     {
@@ -175,39 +181,61 @@ public class PlayerController : MonoBehaviour
     private void CheckForHoverable()
     {
         var ray = new Ray(_mainCamera.transform.position, _mainCamera.transform.TransformDirection(Vector3.forward));
-        
+
         if (!Physics.Raycast(ray, out RaycastHit hit, interactionRange, interactionLayer))
         {
             CallHoverExit();
             return;
         }
-        
+
         if (_currentHoveredObj != hit.transform.gameObject)
         {
             CallHoverExit();
-            hit.transform.TryGetComponent(out IHover hoverable);
-            if (hoverable == null)
+
+            var hoverables = hit.transform.GetComponents<IHover>();
+            if (hoverables.Length == 0)
                 return;
-            
+
             _currentHoveredObj = hit.transform.gameObject;
-            CallHover(hoverable);
+            CallHover(hoverables);
         }
     }
-    
-    private void CallHover(IHover hoverableObj)
+    private void CallHover(IHover[] hoverableObjs)
     {
-        hoverableObj.OnHover();
+        foreach (var hoverable in hoverableObjs)
+            hoverable.OnHoverEnter();
     }
     private void CallHoverExit()
     {
         if (_currentHoveredObj == null)
             return;
-        
-        _currentHoveredObj.GetComponent<IHover>().OnHoverExit();
+
+        var hoverables = _currentHoveredObj.GetComponents<IHover>();
+        foreach (var hoverable in hoverables)
+            hoverable.OnHoverExit();
+
         _currentHoveredObj = null;
     }
+
+    public void CallDeathAnimation()
+    {
+        GetComponentInChildren<Renderer>().shadowCastingMode = ShadowCastingMode.On;
+        DisableAllActions();
+        
+        _animator.SetBool("isDead", true);
+        camController.TriggerDeathCamera(2f, 1f);
+
+        InGamePopupsController.Instance.CallFadeIn(3f, false);
+        StartCoroutine(CallLoseScreen());
+    }
+    public IEnumerator CallLoseScreen()
+    {
+        yield return new WaitForSeconds(3f);
+        EnableAllActions();
+        GameManager.Instance.Lose();
+    }
     
-    private void EnableAllActions()
+    public void EnableAllActions()
     {
         _moveAction.Enable();
         _lookAction.Enable();
@@ -216,7 +244,7 @@ public class PlayerController : MonoBehaviour
         _sprintAction.Enable();
         _interactAction.Enable();
     }
-    private void DisableAllActions()
+    public void DisableAllActions()
     {
         _moveAction.Disable();
         _lookAction.Disable();

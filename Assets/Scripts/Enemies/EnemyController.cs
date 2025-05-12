@@ -14,7 +14,6 @@ public class EnemyGroupSize
     public EnemyType type;
     public int min = 1;
     public int max = 1;
-    public int minimumWavesToSpawn = 1;
 }
 
 public class EnemyController : MonoBehaviour
@@ -24,6 +23,7 @@ public class EnemyController : MonoBehaviour
     [Header("References")]
     [SerializeField] private NavMeshAgent meshAgent;
     [SerializeField] private Animator animator;
+    [SerializeField] private Collider enemyCollider;
     [SerializeField] private LayerMask groundLayer;
 
     private Transform playerTransform;
@@ -31,6 +31,12 @@ public class EnemyController : MonoBehaviour
     private HealthComponent enemyStats;
     private DropItemsComponent _dropItemsComponent;
     private EnemyState currentState;
+    
+    [Header("Hit Effect")]
+    [SerializeField] private List<SkinnedMeshRenderer> meshRenderers;
+    [SerializeField] private Color hitEffectColor;
+    [SerializeField] private float hitEffectDuration;
+    [SerializeField] private float hitEffectMultiplier;
 
     [Header("Grouping Control")]
     [SerializeField] private EnemyType enemyType;
@@ -73,6 +79,7 @@ public class EnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
         _dropItemsComponent = GetComponent<DropItemsComponent>();
         enemyStats = GetComponent<HealthComponent>();
+        enemyCollider = GetComponent<Collider>();
 
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         playerStats = playerTransform.GetComponent<HealthComponent>();
@@ -148,7 +155,6 @@ public class EnemyController : MonoBehaviour
         isAttacking = true;
         animator.Play("Attack");
     }
-
     /// <summary>
     /// Resets attack state after animation.
     /// </summary>
@@ -167,7 +173,6 @@ public class EnemyController : MonoBehaviour
         generatedProjectile = EnemyProjectilesPool.Instance.GetProjectileFromPool();
         generatedProjectile.transform.position = projectileSpawnLocation.position;
     }
-
     /// <summary>
     /// Shoots projectile toward player.
     /// </summary>
@@ -181,7 +186,6 @@ public class EnemyController : MonoBehaviour
 
         Invoke("ReturnProjectile", 3);
     }
-
     /// <summary>
     /// Returns projectile to pool.
     /// </summary>
@@ -189,6 +193,31 @@ public class EnemyController : MonoBehaviour
     {
         EnemyProjectilesPool.Instance.ReturnProjectileToPool(generatedProjectile);
         generatedProjectile = null;
+    }
+
+    public void PlayHitEffect()
+    {
+        StartCoroutine(HitEffect());
+    }
+    private IEnumerator HitEffect()
+    {
+        var block = new MaterialPropertyBlock();
+
+        foreach (var skinnedMesh in meshRenderers)
+        {
+            skinnedMesh.GetPropertyBlock(block);
+            block.SetColor("_BaseColor", hitEffectColor * hitEffectMultiplier);
+            skinnedMesh.SetPropertyBlock(block);
+        }
+
+        yield return new WaitForSeconds(hitEffectDuration);
+
+        foreach (var skinnedMesh in meshRenderers)
+        {
+            skinnedMesh.GetPropertyBlock(block);
+            block.SetColor("_BaseColor", Color.white); // or original color if you store it
+            skinnedMesh.SetPropertyBlock(block);
+        }
     }
 
     #endregion
@@ -228,6 +257,7 @@ public class EnemyController : MonoBehaviour
     {
         meshAgent.ResetPath();
         animator.SetBool("isDead", true);
+        enemyCollider.enabled = false;
 
         if (generatedProjectile)
         {
@@ -246,6 +276,7 @@ public class EnemyController : MonoBehaviour
 
     private IEnumerator ReturnToPool()
     {
+        enemyCollider.enabled = true;
         yield return new WaitForSeconds(2f);
         EnemiesPool.Instance.ReturnEnemyToPool(this);
     }

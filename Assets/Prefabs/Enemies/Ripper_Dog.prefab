@@ -1890,6 +1890,7 @@ GameObject:
   - component: {fileID: 95000010821970536}
   - component: {fileID: 4589457529950621436}
   - component: {fileID: 138209267053837568}
+  - component: {fileID: 226022680215357677}
   - component: {fileID: 3230719568125029404}
   - component: {fileID: 7051644989459097341}
   - component: {fileID: 125167144709858204}
@@ -1913,11 +1914,11 @@ Transform:
   m_LocalScale: {x: 0.78787, y: 0.78787, z: 0.78787}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4136620208774563249}
   - {fileID: 4000010019220828}
   - {fileID: 4000013028838228}
   - {fileID: 4000011535188118}
   - {fileID: 4000013222667324}
-  - {fileID: 864238468934788897}
   - {fileID: 1016364440245889732}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1992,6 +1993,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!136 &226022680215357677
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000014115274004}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2.3
+  m_Direction: 2
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &3230719568125029404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2006,9 +2030,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshAgent: {fileID: 0}
   animator: {fileID: 0}
+  enemyCollider: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  meshRenderers:
+  - {fileID: 137000013690332544}
+  - {fileID: 137000013471025412}
+  - {fileID: 137000011464853460}
+  hitEffectColor: {r: 1, g: 0.0627451, b: 0, a: 1}
+  hitEffectDuration: 0.1
+  hitEffectMultiplier: 10
+  damagePopupSpawn: {fileID: 4136620208774563249}
   enemyType: 0
   isGroupable: 1
   isEnemyBeingCalled: 0
@@ -2069,7 +2102,19 @@ MonoBehaviour:
   hpSlider: {fileID: 9063010441441607578}
   onGetHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3230719568125029404}
+        m_TargetAssemblyTypeName: EnemyController, Assembly-CSharp
+        m_MethodName: PlayHitEffect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDie:
     m_PersistentCalls:
       m_Calls:
@@ -2117,7 +2162,7 @@ Transform:
   - {fileID: 4000012452179986}
   m_Father: {fileID: 4000013985553816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6622814966875111519
+--- !u!1 &1914878760898987753
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2125,53 +2170,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 864238468934788897}
-  - component: {fileID: 7086880153744423519}
+  - component: {fileID: 4136620208774563249}
   m_Layer: 9
-  m_Name: Colliders
+  m_Name: DamagePopupSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &864238468934788897
+--- !u!4 &4136620208774563249
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6622814966875111519}
+  m_GameObject: {fileID: 1914878760898987753}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.019, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.533471, y: 1.3911797, z: 0.724}
+  m_LocalScale: {x: 0.7419625, y: 0.7419625, z: 0.7419625}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4000013208513520}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!136 &7086880153744423519
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6622814966875111519}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2.3
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.06, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3628683457769140194
 PrefabInstance:
   m_ObjectHideFlags: 0
