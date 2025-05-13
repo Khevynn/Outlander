@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6214575545951587617}
   - component: {fileID: 273725993259745689}
   - component: {fileID: 1173749054185719462}
+  - component: {fileID: 3201136087402525153}
   m_Layer: 3
   m_Name: BasicOre
   m_TagString: Untagged
@@ -181,6 +182,18 @@ MonoBehaviour:
     minAmount: 5
     maxAmount: 5
     chanceOfDropping: 100
+--- !u!114 &3201136087402525153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6999416464905948576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a8c2782e46efb4d938a3599c917cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8451143370098412274
 PrefabInstance:
   m_ObjectHideFlags: 0

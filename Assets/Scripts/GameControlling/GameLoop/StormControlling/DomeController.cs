@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using VolumetricFogAndMist2;
 
 public class DomeController : MonoBehaviour
@@ -10,6 +12,10 @@ public class DomeController : MonoBehaviour
     private HealthComponent playerHealthComponent;
     private FogVoid fogVoidComponent;
     private MeshRenderer domeRenderer;
+
+    [Header("UI References")] 
+    [SerializeField] private Image fillImage;
+    [SerializeField] private TMP_Text percentageText;
     
     [Header("Time Limit Control")] 
     [SerializeField] private float maxDurationOfDome;
@@ -39,6 +45,8 @@ public class DomeController : MonoBehaviour
         if (currentDurationOfDome > 0f)
         {
             currentDurationOfDome -= Time.fixedDeltaTime;
+            fillImage.fillAmount = currentDurationOfDome / maxDurationOfDome;
+            percentageText.text = $"{((currentDurationOfDome / maxDurationOfDome) * 100f):F0}%";
             return;
         }
 
@@ -67,7 +75,9 @@ public class DomeController : MonoBehaviour
 
         // Timer and damage handling
         if (currentTimer > 0f)
+        {
             currentTimer -= Time.fixedDeltaTime;
+        }
 
         if (isPlayerOutside && currentTimer <= 0f)
             DealDamageToPlayer();

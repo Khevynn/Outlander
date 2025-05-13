@@ -16,6 +16,6 @@ public class ItemHoverPopup : MonoBehaviour, IHover
     }
     public void OnHoverExit()
     {
-        InGamePopupsController.Instance.HidePopup();
+        InGamePopupsController.Instance.HideItemInfoPopup();
     }
 }

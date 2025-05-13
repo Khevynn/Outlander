@@ -17,8 +17,8 @@ public class InGamePopupsController : MonoBehaviour
     [SerializeField] private TMP_Text interactionPopupQuantity;
     [SerializeField] private TMP_Text interactionPopupInteractionText;
     
-    [Header("Enemies Indicator")]
-    [SerializeField] private GameObject indicator;
+    [Header("Objects Indicators")]
+    [SerializeField] private GameObject miningIconGameObject;
     
     [Header("Fade In - Out")]
     [SerializeField] private CanvasGroup fadeCanvasGroup;
@@ -48,10 +48,22 @@ public class InGamePopupsController : MonoBehaviour
 
     public void ShowItemInfo(Item item)
     {
-        interactionPopup.SetActive(true);
         interactionPopupTitle.text = item.GetItemData().Name;
         interactionPopupQuantity.text = $"x{item.GetAmountOfItems().ToString()}";
         interactionPopupInteractionText.text = "Collect";
+        interactionPopup.SetActive(true);
+    }
+    public void HideItemInfoPopup()
+    {
+        interactionPopup.SetActive(false);
+    }
+    public void ShowMiningIcon()
+    {
+        miningIconGameObject.SetActive(true);
+    }
+    public void HideMiningIcon()
+    {
+        miningIconGameObject.SetActive(false);
     }
 
     public void ShowStormAlert()
@@ -128,10 +140,5 @@ public class InGamePopupsController : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-    }
-
-    public void HidePopup()
-    {
-        interactionPopup.SetActive(false);
     }
 }
