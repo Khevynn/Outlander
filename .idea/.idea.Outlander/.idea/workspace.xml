@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f94f41cb-bacb-4454-ab73-771801b5df14" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/UI/Menus/MenuButton.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/UI/Menus/MenuButton.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WinMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WinMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/EndMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/EndMenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/ItemData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/ItemRecipe.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/BGMusicController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pools/EnemiesPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pools/EnemyProjectilesPool.cs" root0="FORCE_HIGHLIGHTING" />
@@ -199,7 +197,7 @@
       <workItem from="1747041432208" duration="6091000" />
       <workItem from="1747047623512" duration="5417000" />
       <workItem from="1747131133832" duration="11392000" />
-      <workItem from="1747215437671" duration="786000" />
+      <workItem from="1747215437671" duration="2641000" />
     </task>
     <servers />
   </component>

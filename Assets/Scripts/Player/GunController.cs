@@ -15,6 +15,7 @@ public class GunController : MonoBehaviour
     [SerializeField] private float shootMaxDelay = 0.5f;
     [SerializeField] private float trailDuration = 0.5f;
     [SerializeField] private Vector3 bulletSpreadVariance;
+    [SerializeField] private AudioSource shootSound;
     private float _shootCurrentDelay;
     
     private InputAction _shootAction;
@@ -46,6 +47,8 @@ public class GunController : MonoBehaviour
         if(_shootCurrentDelay > 0)
             return;
         
+        shootSound.Stop();
+        shootSound.Play();
         _animator.Play("ShootingAnim", 0, 0f);
         _shootCurrentDelay = shootMaxDelay;
         

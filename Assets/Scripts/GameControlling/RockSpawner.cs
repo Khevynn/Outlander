@@ -28,7 +28,7 @@ public class RockSpawner : MonoBehaviour
 
                 var selectedPrefab = Random.Range(0, rockPrefabsList.Count - 1);
                 
-                GameObject rock = Instantiate(rockPrefabsList[selectedPrefab], hit.point, rotation);
+                GameObject rock = Instantiate(rockPrefabsList[selectedPrefab], hit.point, rotation, transform);
                 rock.transform.Rotate(Vector3.up, Random.Range(0, 360f)); // Random Y rotation for variation
             }
         }

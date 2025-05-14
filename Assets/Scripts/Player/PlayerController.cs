@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -41,6 +42,11 @@ public class PlayerController : MonoBehaviour
     private InputAction _pauseAction;
     
     private bool _onGround;
+    private bool _isMoving => GetMoveInput().magnitude != 0 && _onGround;
+    private bool _isRunning;
+    
+    private Vector2 _cachedMoveInput;
+    private float _hoverCheckTimer = 0f;
 
     private void Start()
     {
@@ -57,42 +63,55 @@ public class PlayerController : MonoBehaviour
         _interactAction = InputSystem.actions.FindAction("Interact");
         _inventoryAction = InputSystem.actions.FindAction("Inventory");
         _pauseAction = InputSystem.actions.FindAction("Pause");
+        
+        
+        _interactAction.performed += ctx => CallInteraction();
+        _inventoryAction.performed += ctx => OpenOrCloseInventory();
+        _pauseAction.performed += ctx => PauseOrUnpauseGame();
     }
     private void Update()
     {
+        _cachedMoveInput = GetMoveInput();
         UpdateAnimations();
+        
+        
     }
     private void FixedUpdate()
     {
         CheckForInputs();
         CheckIsGrounded();
-        CheckForHoverable();
+        
+        _hoverCheckTimer += Time.fixedDeltaTime;
+        if (_hoverCheckTimer > 0.2f)
+        {
+            CheckForHoverable();
+            _hoverCheckTimer = 0f;
+        }
         
         Movement();
     }
 
     private void CheckForInputs()
     {
-        _interactAction.performed += ctx => CallInteraction();
-        _inventoryAction.performed += ctx => OpenOrCloseInventory();
-        _pauseAction.performed += ctx => PauseOrUnpauseGame();
         if (_jumpAction.IsPressed())
         {
             Jump();
         }
         if (_sprintAction.IsPressed() && _onGround)
         {
+            _isRunning = true;
             _currentMaxSpeed = sprintSpeed;
         }
         else
         {
+            _isRunning = false;
             _currentMaxSpeed = walkSpeed;
         }
     }
 
     private void Movement()
     {
-        _moveDirection = transform.forward * GetMoveInput().y + transform.right * GetMoveInput().x;
+        _moveDirection = transform.forward * _cachedMoveInput.y + transform.right * _cachedMoveInput.x;
 
         // Rotate direction 20 degrees around Y axis to fit with the camera direction
         Quaternion rotation = Quaternion.AngleAxis(-20f, Vector3.up);
@@ -126,8 +145,8 @@ public class PlayerController : MonoBehaviour
     {
         _animator.SetBool("isMoving", _moveDirection != Vector3.zero);
         _animator.SetBool("isJumping", !_onGround);
-        _animator.SetFloat("MoveX", GetMoveInput().x);
-        _animator.SetFloat("MoveZ", GetMoveInput().y);
+        _animator.SetFloat("MoveX", _cachedMoveInput.x);
+        _animator.SetFloat("MoveZ", _cachedMoveInput.y);
     }
     
     private void OpenOrCloseInventory()
@@ -268,4 +287,9 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position + Vector3.up * 0.5f, transform.position + Vector3.down * 0.1f);
     }
+
+    public bool OnGround() => _onGround;
+    public bool IsMoving() => _isMoving;
+    public bool IsRunning() => _isRunning;
+    public float GetSprintSpeed() => sprintSpeed;
 }
