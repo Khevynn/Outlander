@@ -6,4 +6,9 @@ public class EndMenuController : MonoBehaviour
     {
         SceneLoader.Instance.LoadScene("StartMenu");
     }
+    
+    public void OnTweetButtonClicked()
+    {
+        TwitterShare.Instance.ShareToTwitter("I just finished Outlander! What an intense journey.\n #OutlanderGame #GameCompleted");
+    }
 }
