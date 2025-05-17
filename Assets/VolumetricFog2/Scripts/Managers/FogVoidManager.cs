@@ -76,7 +76,7 @@ namespace VolumetricFogAndMist2 {
 
             int count = 0;
             int fogVoidsCount = fogVoids.Count;
-            for (int i = 0; count < MAX_FOG_VOID && i < fogVoidsCount; i++) {
+            for (int i = 0; count < MAX_FOG_VOID && i < fogVoidsCount; ++i) {
                 FogVoid fogVoid = fogVoids[i];
                 if (fogVoid == null || !fogVoid.isActiveAndEnabled) continue;
                 Transform t = fogVoid.transform;

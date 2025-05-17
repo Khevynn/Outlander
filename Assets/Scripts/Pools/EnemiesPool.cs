@@ -38,7 +38,7 @@ public class EnemiesPool : MonoBehaviour
             spawnPosition = hit.transform.position;
         }
         
-        for(int i = 0; i < _enemiesPrefabs.Count; i++)
+        for(int i = 0; i < _enemiesPrefabs.Count; ++i)
         {
             for (int numberOfEnemies = 0; numberOfEnemies < minimumSpawnOfEachEnemy; numberOfEnemies++)
             {
@@ -53,7 +53,7 @@ public class EnemiesPool : MonoBehaviour
     {
         EnemyController enemyToReturn = null;
         bool couldFindEnemy = false;
-        for(int i = 0; i < _availableEnemiesInPool.Count; i++)
+        for(int i = 0; i < _availableEnemiesInPool.Count; ++i)
         {
             if(_availableEnemiesInPool[i].GetEnemyType() == type)
             {

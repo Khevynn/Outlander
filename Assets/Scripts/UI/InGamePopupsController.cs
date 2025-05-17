@@ -78,6 +78,7 @@ public class InGamePopupsController : MonoBehaviour
     public void HideStormAlert()
     {
         StartCoroutine(StormAlertFadeOut());
+        stormAlertGameObject.SetActive(false);
     }
 
     public void CallDamageAlert(float duration)

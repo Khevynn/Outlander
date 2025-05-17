@@ -308,7 +308,7 @@ namespace VolumetricFogAndMist2 {
 
             colorKeysTimes.Clear();
             if (a.colorKeys != null) {
-                for (int i = 0; i < a.colorKeys.Length; i++) {
+                for (int i = 0; i < a.colorKeys.Length; ++i) {
                     float k = a.colorKeys[i].time;
                     if (!colorKeysTimes.Contains(k))
                         colorKeysTimes.Add(k);
@@ -316,7 +316,7 @@ namespace VolumetricFogAndMist2 {
             }
 
             if (b.colorKeys != null) {
-                for (int i = 0; i < b.colorKeys.Length; i++) {
+                for (int i = 0; i < b.colorKeys.Length; ++i) {
                     float k = b.colorKeys[i].time;
                     if (!colorKeysTimes.Contains(k))
                         colorKeysTimes.Add(k);
@@ -325,7 +325,7 @@ namespace VolumetricFogAndMist2 {
 
             alphaKeysTimes.Clear();
             if (a.alphaKeys != null) {
-                for (int i = 0; i < a.alphaKeys.Length; i++) {
+                for (int i = 0; i < a.alphaKeys.Length; ++i) {
                     float k = a.alphaKeys[i].time;
                     if (!alphaKeysTimes.Contains(k))
                         alphaKeysTimes.Add(k);
@@ -333,7 +333,7 @@ namespace VolumetricFogAndMist2 {
             }
 
             if (b.alphaKeys != null) {
-                for (int i = 0; i < b.alphaKeys.Length; i++) {
+                for (int i = 0; i < b.alphaKeys.Length; ++i) {
                     float k = b.alphaKeys[i].time;
                     if (!alphaKeysTimes.Contains(k))
                         alphaKeysTimes.Add(k);
@@ -345,7 +345,7 @@ namespace VolumetricFogAndMist2 {
             if (colorKeys == null || colorKeys.Length != colorKeysTimesCount) {
                 colorKeys = new GradientColorKey[colorKeysTimesCount];
             }
-            for (int i = 0; i < colorKeysTimesCount; i++) {
+            for (int i = 0; i < colorKeysTimesCount; ++i) {
                 float key = colorKeysTimes[i];
                 var color = Color.Lerp(a.Evaluate(key), b.Evaluate(key), t);
                 colorKeys[i] = new GradientColorKey(color, key);
@@ -356,7 +356,7 @@ namespace VolumetricFogAndMist2 {
             if (alphaKeys == null || alphaKeys.Length != alphaKeysTimesCount) {
                 alphaKeys = new GradientAlphaKey[alphaKeysTimesCount];
             }
-            for (int i = 0; i < alphaKeysTimesCount; i++) {
+            for (int i = 0; i < alphaKeysTimesCount; ++i) {
                 float key = alphaKeysTimes[i];
                 var color = Color.Lerp(a.Evaluate(key), b.Evaluate(key), t);
                 alphaKeys[i] = new GradientAlphaKey(color.a, key);

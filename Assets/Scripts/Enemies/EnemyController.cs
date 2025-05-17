@@ -180,18 +180,10 @@ public class EnemyController : MonoBehaviour
     {
         if (generatedProjectile.TryGetComponent(out Rigidbody rb))
         {
-            var direction = playerTransform.position - projectileSpawnLocation.position;
+            var direction = playerTransform.position + new Vector3(0f,1f,0f) - projectileSpawnLocation.position;
             rb.AddForce(direction * 500);
         }
 
-        Invoke("ReturnProjectile", 3);
-    }
-    /// <summary>
-    /// Returns projectile to pool.
-    /// </summary>
-    private void ReturnProjectile()
-    {
-        EnemyProjectilesPool.Instance.ReturnProjectileToPool(generatedProjectile);
         generatedProjectile = null;
     }
 
@@ -261,7 +253,7 @@ public class EnemyController : MonoBehaviour
 
         if (generatedProjectile)
         {
-            ReturnProjectile();
+            generatedProjectile = null;
         }
 
         CallDropItems();
@@ -316,6 +308,7 @@ public class EnemyController : MonoBehaviour
     }
 
     public EnemyType GetEnemyType() => enemyType;
+    public EnemyState GetCurrentState() => currentState;
     public float GetMaxVisionRange() => maxVisionRange;
     public float GetMaxVisionAngle() => maxVisionAngle;
     public float GetAttackRange() => attackRange;

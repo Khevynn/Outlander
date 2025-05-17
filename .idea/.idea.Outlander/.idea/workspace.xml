@@ -6,6 +6,57 @@
   <component name="ChangeListManager">
     <list default="true" id="f94f41cb-bacb-4454-ab73-771801b5df14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Dog/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Dog/Attack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Dog/Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Dog/Run.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Dog/Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Dog/Walk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/FlyingBeetle/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/FlyingBeetle/Attack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/LandBeetle/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/LandBeetle/Attack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Spider/Attack_Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Spider/Attack_Right.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Spider/Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Spider/Run.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Italic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Italic SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_3.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_4.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_5.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_5.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_6.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_6.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_7.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_7.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/ItemsGenerators/BasicOre.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/ItemsGenerators/BasicOre.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/FlyingBeetle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/FlyingBeetle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/HPBar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/HPBar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/LandBeetle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/LandBeetle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Ripper_Dog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Ripper_Dog.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Spider.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Spider.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RangedProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RangedProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/DropItemsComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/DropItemsComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/HealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/HealthComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyStateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/States/PatrollingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/States/PatrollingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControlling/GameLoop/StormControlling/StormManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameControlling/GameLoop/StormControlling/StormManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControlling/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameControlling/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControlling/RockSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameControlling/RockSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/CollectableResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/CollectableResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSoundsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSoundsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/EnemiesPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pools/EnemiesPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/EnemyProjectilesPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pools/EnemyProjectilesPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/ItemsPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pools/ItemsPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGamePopupsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGamePopupsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/VideoSettingsPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/VideoSettingsPopup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VolumetricFog2/Scripts/Managers/FogVoidManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VolumetricFog2/Scripts/Managers/FogVoidManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VolumetricFog2/Scripts/Managers/PointLightManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VolumetricFog2/Scripts/Managers/PointLightManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VolumetricFog2/Scripts/VolumetricFogProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VolumetricFog2/Scripts/VolumetricFogProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +98,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/ItemData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/ItemRecipe.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music/BGMusicController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pools/EnemiesPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pools/EnemyProjectilesPool.cs" root0="FORCE_HIGHLIGHTING" />
@@ -197,7 +247,10 @@
       <workItem from="1747041432208" duration="6091000" />
       <workItem from="1747047623512" duration="5417000" />
       <workItem from="1747131133832" duration="11392000" />
-      <workItem from="1747215437671" duration="2641000" />
+      <workItem from="1747215437671" duration="13920000" />
+      <workItem from="1747311840205" duration="9326000" />
+      <workItem from="1747391960299" duration="7817000" />
+      <workItem from="1747485232373" duration="5602000" />
     </task>
     <servers />
   </component>
@@ -213,5 +266,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Interactables/CollectableResource.cs</url>
+          <line>43</line>
+          <properties documentPath="C:\Users\khevy\Documents\GitHub\Outlander\Assets\Scripts\Interactables\CollectableResource.cs" containingFunctionPresentation="Method 'FixedUpdate'">
+            <startOffsets>
+              <option value="1320" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1374" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

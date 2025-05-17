@@ -10,6 +10,7 @@ public class CollectableResource : MonoBehaviour, IInteract
     
     [Header("Collecting Control")]
     [SerializeField] private float maxHoldTimeToDrop;
+    [SerializeField] private AudioSource audioSource;
     private float _currentHoldTimeToDrop;
     private bool _isCollecting;
     
@@ -54,8 +55,8 @@ public class CollectableResource : MonoBehaviour, IInteract
         _currentHoldTimeToDrop = 0f;
         CurrentCollecting = this;
         StartUIForCollecting();
+        audioSource.Play();
     }
-    
     
     private void StartUIForCollecting()
     {

@@ -30,7 +30,7 @@ public class ItemsPool : MonoBehaviour
 
     private void SpawnInitialItems()
     {
-        for(int i = 0; i < _itemsPrefabs.Count; i++)
+        for(int i = 0; i < _itemsPrefabs.Count; ++i)
         {
             Item item = Instantiate(_itemsPrefabs[i], transform.position, Quaternion.identity, transform).GetComponent<Item>();
             _availableItemsInPool.Add(item);
@@ -42,7 +42,7 @@ public class ItemsPool : MonoBehaviour
     {
         Item itemToReturn = null;
         bool couldFindItem = false;
-        for(int i = 0; i < _availableItemsInPool.Count; i++)
+        for(int i = 0; i < _availableItemsInPool.Count; ++i)
         {
             if(_availableItemsInPool[i].GetItemData().Id == itemId)
             {

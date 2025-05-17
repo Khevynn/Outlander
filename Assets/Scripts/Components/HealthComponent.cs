@@ -80,6 +80,14 @@ public class HealthComponent : MonoBehaviour, IDamageable
         
         onGetHit.Invoke();
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.CompareTag("EnemyProjectile") && owner == ComponentOwner.Player & other.TryGetComponent(out EnemyProjectile projectile))
+        {
+            TakeDamage(projectile.projectileDamage);
+        }
+    }
     public void Die()
     {
         IsDead = true;

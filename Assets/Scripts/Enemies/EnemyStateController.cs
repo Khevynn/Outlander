@@ -32,6 +32,9 @@ public class EnemyState
     protected Transform PlayerTransform { get; private set; }
 
     protected HealthComponent StatsController;
+
+    protected Vector3 npcFlatPosition;
+    protected Vector3 agentFlatVelocity;
     //Constructors
     public EnemyState()
     {
@@ -58,8 +61,13 @@ public class EnemyState
     {
         if(Agent.hasPath)
             TurnEnemyToTarget();
+
+        agentFlatVelocity.x = Agent.velocity.x;
+        agentFlatVelocity.z = Agent.velocity.z;
+        npcFlatPosition.x = NpcGameObject.transform.position.x;
+        npcFlatPosition.z = NpcGameObject.transform.position.z;
         
-        if(Agent.velocity.magnitude >= 0.2f)
+        if(agentFlatVelocity.magnitude >= 1f)
             NpcAnimator.SetBool("isWalking", true);
         
         NpcAnimator.SetFloat("CurrentSpeed", Agent.speed);

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MainCanvas
   - DropArea
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX

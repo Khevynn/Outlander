@@ -35,7 +35,7 @@ public class PatrollingState : EnemyState
             ChangeToState(new PursuingState());
         }
         
-        if (Agent.hasPath && Vector3.Distance(NpcGameObject.transform.position, walkPoint) < Agent.stoppingDistance)
+        if (Agent.hasPath && Vector3.Distance(npcFlatPosition, new Vector3(walkPoint.x, 0, walkPoint.z)) <= Agent.stoppingDistance)
         {
             if (TryToChangeState(State.Idle, _chanceOfChangingToIdle))
                 return;

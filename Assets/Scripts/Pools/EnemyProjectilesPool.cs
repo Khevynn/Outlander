@@ -29,7 +29,7 @@ public class EnemyProjectilesPool : MonoBehaviour
 
     private void SpawnInitialProjectiles()
     {
-        for(int i = 0; i < startNumberOfProjectiles; i++)
+        for(int i = 0; i < startNumberOfProjectiles; ++i)
         {
             GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity, transform);
             _availableProjectiles.Add(projectile);

@@ -96,7 +96,7 @@ namespace VolumetricFogAndMist2 {
             }
 
             int pointLightsCount = pointLights.Count;
-            for (int i = 0; count < MAX_POINT_LIGHTS && i < pointLightsCount; i++) {
+            for (int i = 0; count < MAX_POINT_LIGHTS && i < pointLightsCount; ++i) {
                 FogPointLight fogPointLight = pointLights[i];
                 if (fogPointLight == null || !fogPointLight.isActiveAndEnabled) continue;
 

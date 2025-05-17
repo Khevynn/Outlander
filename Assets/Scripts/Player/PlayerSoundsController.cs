@@ -4,6 +4,10 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerController))]
 public class PlayerSoundsController : MonoBehaviour
 {
+    [Header("References")]
+    private Rigidbody _rb;
+    private PlayerController _playerController;
+    
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] footstepClips;
@@ -15,9 +19,7 @@ public class PlayerSoundsController : MonoBehaviour
 
     [Header("Variation")]
     [SerializeField] private Vector2 pitchRange = new Vector2(0.95f, 1.05f);
-
-    private Rigidbody _rb;
-    private PlayerController _playerController;
+    
     private float stepTimer;
     private bool _wasGroundedLastFrame;
 

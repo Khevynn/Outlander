@@ -89,7 +89,7 @@ public class VideoSettingsPopup : MonoBehaviour
     }
     private void AddResolutionsToList(List<string> options)
     {
-        for (int i = 0; i < filteredResolutions.Count; i++)
+        for (int i = 0; i < filteredResolutions.Count; ++i)
         {
             var resolution = filteredResolutions[i];
             var resolutionOptionText= $"{resolution.width}x{resolution.height}";

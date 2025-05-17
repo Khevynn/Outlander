@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -73,11 +74,10 @@ public class PlayerController : MonoBehaviour
     {
         _cachedMoveInput = GetMoveInput();
         UpdateAnimations();
-        
-        
     }
     private void FixedUpdate()
     {
+        
         CheckForInputs();
         CheckIsGrounded();
         
@@ -155,10 +155,12 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = inventoryUI.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
         if (inventoryUI.activeSelf)
         {
+            InventoryManager.Instance.PlayOpenBackpackSound();
             DisableAllActions();
         }
         else
         {
+            InventoryManager.Instance.PlayCloseBackpackSound();
             EnableAllActions();
         }
     }
@@ -170,11 +172,13 @@ public class PlayerController : MonoBehaviour
         if (pauseMenuUI.activeSelf)
         {
             DisableAllActions();
+            GameManager.Instance.PauseAllGameSounds();
             Time.timeScale = 0f;
         }
         else
         {
             EnableAllActions();
+            GameManager.Instance.UnpauseAllGameSounds();
             Time.timeScale = 1f;
         }
     }

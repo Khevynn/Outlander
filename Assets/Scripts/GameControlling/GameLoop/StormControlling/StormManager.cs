@@ -9,8 +9,10 @@ public class StormManager : MonoBehaviour
 {
     public static StormManager Instance { get; private set; }
 
-    [Header("Storm Visuals")]
+    [Header("Storm Visuals/Audio")]
     [SerializeField] private VolumetricFogProfile stormProfile;
+    [SerializeField] private AudioSource stormAudioSource;
+    [SerializeField] private Vector2 stormVolumeRange;
 
     [Header("Storm Timings")]
     [SerializeField] private float maxTimeBetweenStorms = 60f;
@@ -62,7 +64,6 @@ public class StormManager : MonoBehaviour
 
         Instance = this;
     }
-
     private void Start()
     {
         playerTransform = GameObject.FindWithTag("Player")?.transform;
@@ -74,7 +75,6 @@ public class StormManager : MonoBehaviour
         stormProfile.noiseFinalMultiplier = 0f;
         currentTimeBetweenStorms = maxTimeBetweenStorms;
     }
-
     private void FixedUpdate()
     {
         if (!currentlyInStorm && !finishingStorm && !startingStorm)
@@ -113,6 +113,7 @@ public class StormManager : MonoBehaviour
         lastStartedStormTime = Time.time;
 
         InGamePopupsController.Instance.ShowStormAlert();
+        stormAudioSource.Play();
         yield return LerpStormMultiplier(0f, 1.3f, timeToStartStorm);
 
         startingStorm = false;
@@ -138,11 +139,13 @@ public class StormManager : MonoBehaviour
             startStormCoroutine = null;
         }
 
-        for (int i = 0; i < numberOfWavesToSpawnIfSkipped; i++)
+        for (int i = 0; i < numberOfWavesToSpawnIfSkipped; ++i)
             CreateEnemyWave(Mathf.Pow(enemyGrowthRate, currentWave - 1));
 
         currentTimeBetweenStorms = maxTimeBetweenStorms;
         stormProfile.noiseFinalMultiplier = 0f;
+        stormAudioSource.volume = 0f;
+        stormAudioSource.Stop();
     }
 
     private IEnumerator FinishStorm()
@@ -151,6 +154,7 @@ public class StormManager : MonoBehaviour
         finishingStorm = true;
 
         yield return LerpStormMultiplier(stormProfile.noiseFinalMultiplier, 0f, timeToFinishStorm);
+        stormAudioSource.Stop();
 
         currentTimeBetweenStorms = maxTimeBetweenStorms;
         finishingStorm = false;
@@ -163,6 +167,12 @@ public class StormManager : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             stormProfile.noiseFinalMultiplier = Mathf.Lerp(from, to, elapsed / duration);
+
+            if (from < to)
+                stormAudioSource.volume = Mathf.Lerp(stormVolumeRange.x, stormVolumeRange.y, elapsed / duration);
+            else
+                stormAudioSource.volume = Mathf.Lerp(stormVolumeRange.y, stormVolumeRange.x, elapsed / duration);
+            
             yield return null;
         }
         stormProfile.noiseFinalMultiplier = to;
@@ -194,7 +204,7 @@ public class StormManager : MonoBehaviour
             int groupSize = Mathf.Min(GetGroupSizeForType(type), toSpawn);
 
             Vector3 spawnPoint = GetRandomSpawnPoint();
-            for (int i = 0; i < groupSize; i++)
+            for (int i = 0; i < groupSize; ++i)
             {
                 EnemyController enemy = EnemiesPool.Instance.GetEnemyOfType(type);
                 enemy.gameObject.SetActive(false);

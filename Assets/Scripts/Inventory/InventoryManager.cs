@@ -22,6 +22,14 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private TMP_Text popupTitle;
     [SerializeField] private TMP_Text popupDescription;
     [SerializeField] private Image popupImage;
+
+    [Header("Audio Settings")] 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip grabItemClip;
+    [SerializeField] private AudioClip dropItemClip;
+    [SerializeField] private AudioClip openBackpackClip;
+    [SerializeField] private AudioClip craftItemClip;
+    [SerializeField] private AudioClip failCraftClip;
     
     [Header("Inventory")]
     private List<StoreSlot> _itemsInInventory = new List<StoreSlot>();
@@ -51,7 +59,7 @@ public class InventoryManager : MonoBehaviour
     public void CollectItem(ItemData itemData, int quantity)
     {
         int remainingItems = quantity;
-        for (int i = 0; i < _itemsInInventory.Count; i++)
+        for (int i = 0; i < _itemsInInventory.Count; ++i)
         {
             if (_itemsInInventory[i].ItemData.Id == itemData.Id && itemData.IsStackable)
             {
@@ -63,6 +71,8 @@ public class InventoryManager : MonoBehaviour
 
         if (remainingItems > 0)
             CreateNewSlots(itemData, remainingItems);
+        
+        PlayGrabItemSound();
     }
     public void CollectItem(Item item)
     {
@@ -80,6 +90,8 @@ public class InventoryManager : MonoBehaviour
 
         _itemsInInventory.Remove(storeSlot);
         ReturnSlotToPool(storeSlot);
+        
+        PlayDropItemSound();
     }
 
     public CraftResult CraftItem(ItemRecipe itemRecipe)
@@ -90,6 +102,7 @@ public class InventoryManager : MonoBehaviour
         {
             result.ResultType = CraftResultType.MissingItems;
             result.Message = "Missing Items!";
+            PlayFailCraftSound();
             return result;
         }
 
@@ -100,6 +113,8 @@ public class InventoryManager : MonoBehaviour
         
         result.ResultType = CraftResultType.Success;
         result.Message = "Successfully Crafted!";
+        PlayCraftItemSound();
+        
         return result;
     }
     private bool VerifyIfThePlayerHasAllItems(ItemRecipe itemRecipe)
@@ -163,7 +178,7 @@ public class InventoryManager : MonoBehaviour
 
     private void CreateDefaultSlots()
     {        
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; ++i)
         {
             var newSlot = Instantiate(itemSlotPrefab, slotsParent.transform).GetComponent<StoreSlot>();
             newSlot.gameObject.SetActive(false);
@@ -265,5 +280,39 @@ public class InventoryManager : MonoBehaviour
     {
         slot.gameObject.SetActive(false);
         _availableSlots.Add(slot);
+    }
+    
+    private void PlayGrabItemSound()
+    {
+        audioSource.pitch = 1;
+        audioSource.PlayOneShot(grabItemClip);
+    }
+    private void PlayDropItemSound()
+    {
+        audioSource.pitch = 1;
+        audioSource.PlayOneShot(dropItemClip);
+    }
+    public void PlayCraftItemSound()
+    {
+        audioSource.pitch = 1;
+        audioSource.PlayOneShot(craftItemClip);
+    }
+    public void PlayFailCraftSound()
+    {
+        audioSource.pitch = 1;
+        audioSource.PlayOneShot(failCraftClip);
+    }
+    
+    public void PlayOpenBackpackSound()
+    {
+        audioSource.pitch = 1;
+        audioSource.PlayOneShot(openBackpackClip);
+    }
+    public void PlayCloseBackpackSound()
+    {
+        audioSource.pitch = -1;
+        audioSource.clip = openBackpackClip;
+        audioSource.timeSamples = audioSource.clip.samples - 1;
+        audioSource.Play();
     }
 }

@@ -16,9 +16,9 @@ public class RockSpawner : MonoBehaviour
 
     private void SpawnRocks()
     {
-        for (int i = 0; i < numberOfRocks; i++)
+        for (int i = 0; i < numberOfRocks; ++i)
         {
-            var spawnPosition = GetRandomPositionNearCenter(spawnRange); // 300 units range from center
+            var spawnPosition = GetRandomPositionNearCenter(spawnRange);
 
             // Get terrain normal using a raycast
             if (Physics.Raycast(spawnPosition + Vector3.up * 10f, Vector3.down, out RaycastHit hit, 20f))
@@ -26,13 +26,17 @@ public class RockSpawner : MonoBehaviour
                 Vector3 normal = hit.normal;
                 Quaternion rotation = Quaternion.FromToRotation(Vector3.up, normal);
 
-                var selectedPrefab = Random.Range(0, rockPrefabsList.Count - 1);
-                
-                GameObject rock = Instantiate(rockPrefabsList[selectedPrefab], hit.point, rotation, transform);
+                var selectedPrefab = Random.Range(0, rockPrefabsList.Count); // Fix: should not subtract 1 here
+
+                // Offset into the ground (0.5 units)
+                Vector3 embeddedPosition = hit.point - normal * 0.5f;
+
+                GameObject rock = Instantiate(rockPrefabsList[selectedPrefab], embeddedPosition, rotation, transform);
                 rock.transform.Rotate(Vector3.up, Random.Range(0, 360f)); // Random Y rotation for variation
             }
         }
     }
+
 
     private Vector3 GetRandomPositionNearCenter(float range)
     {
