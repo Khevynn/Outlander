@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     [SerializeField] private List<AudioSource> gameSounds;
-    private bool _textToSpeech = true;
 
     private void Awake()
     {
@@ -81,6 +80,4 @@ public class GameManager : MonoBehaviour
             gameSounds[i].UnPause();
         }
     }
-
-    public bool IsTextToSpeechActive() => _textToSpeech;
 }
