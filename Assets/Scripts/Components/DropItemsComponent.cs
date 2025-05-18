@@ -23,7 +23,6 @@ public class DropItemsComponent : MonoBehaviour
             if (Random.Range(0f, 100f) <= itemsToDrop[i].chanceOfDropping)
             {
                 Item item = ItemsPool.Instance.GetItemWithId(itemsToDrop[i].itemPrefab.GetItemData().Id);
-                print(item);
                 item.SetAmountOfItems(Random.Range(itemsToDrop[i].minAmount, itemsToDrop[i].maxAmount + 1));
 
                 item.transform.position = transform.position + new Vector3(0f,1f,0f);

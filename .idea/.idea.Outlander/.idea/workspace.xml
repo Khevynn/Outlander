@@ -6,57 +6,216 @@
   <component name="ChangeListManager">
     <list default="true" id="f94f41cb-bacb-4454-ab73-771801b5df14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Outlander/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Dog/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Dog/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Dog/Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Dog/Run.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Dog/Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Dog/Walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/FlyingBeetle/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/FlyingBeetle/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/LandBeetle/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/LandBeetle/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Spider/Attack_Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Spider/Attack_Right.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Spider/Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Enemies/Spider/Run.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Items/Ores.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Items/Ores.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Items/Ores/PP_Standard_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Items/Ores/PP_Standard_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/Props/Gridbox/Prototype_512x512_Blue1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/Props/Gridbox/Prototype_512x512_Blue1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/Props/Ores.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Meshes/Props/Ores.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/Props/Ores/PP_Gemstone_05_Green.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/Props/Ores/PP_Gemstone_05_Green.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/Props/Ores/PP_Gemstone_07_Copper.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/Props/Ores/PP_Gemstone_07_Copper.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/Props/Ores/PP_Gemstone_07_Gold.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/Props/Ores/PP_Gemstone_07_Gold.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/Props/Ores/PP_Gemstone_11_Red.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/Props/Ores/PP_Gemstone_11_Red.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/Props/Ores/PP_Gemstone_13_Blue.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Meshes/Props/Ores/PP_Gemstone_13_Blue.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Shaders/SimpleToon/Shader/ToonLightBase.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Shaders/SimpleToon/Shader/ToonLightBase.shader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Italic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac Italic SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Fonts/Videopac SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_2.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_2.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_3.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_3.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_4.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_4.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_5.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_5.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_6.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_6.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_7.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Player/S_Stone_Mono_7.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/ItemsGenerators/BasicOre.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/ItemsGenerators/BasicOre.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Icons/Items/BasicOreIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Icons/Items/BasicOreIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Icons/Items/IntermediateOreIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Icons/Items/IntermediateOreIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Materials/Lightning Hit (Blue)/Lightning HitB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Materials/Lightning Hit (Blue)/Lightning HitB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Materials/Lightning Hit (Blue)/Lightning ShockwaveB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Materials/Lightning Hit (Blue)/Lightning ShockwaveB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Materials/Lightning Hit (Blue)/Lightning SparkB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Materials/Lightning Hit (Blue)/Lightning SparkB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Materials/Lightning Hit (Blue)/Lightning TrailB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Materials/Lightning Hit (Blue)/Lightning TrailB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies/Dog.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies/Dog/DogTexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies/Dog/DogTexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies/FlyingBeetle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies/FlyingBeetle/FlyingBeetleTexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies/FlyingBeetle/FlyingBeetleTexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies/LandBeetle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies/LandBeetle/LandBeetleTexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies/LandBeetle/LandBeetleTexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies/Spider.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies/Spider/SpiderTexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Enemies/Spider/SpiderTexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Items.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Items/Ores.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Items/Ores/PP_Color_Palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Items/Ores/PP_Color_Palette.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Black_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Black_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Blue_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Blue_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Green_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Green_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Orange_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Orange_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Pink_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Pink_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Red_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Red_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_White_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_White_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Yellow_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Astronault_Yellow_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Gun.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Gun/GunOneYellow.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Gun/GunOneYellow/SciFiGunHeavy_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Gun/GunOneYellow/SciFiGunHeavy_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Gun/GunOneYellow/SciFiGunHeavy_SpecularSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Gun/GunOneYellow/SciFiGunHeavy_SpecularSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Gun/SciFiGunHeavy_Emission1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Gun/SciFiGunHeavy_Emission1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Gun/SciFiGunHeavy_Emission2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Gun/SciFiGunHeavy_Emission2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Gun/SciFiGunHeavy_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Gun/SciFiGunHeavy_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Props_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/MainCharacter/Props_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/ProjectileTex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/ProjectileTex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_blue1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_blue1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_blue2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_blue2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_blue3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_blue3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_brown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_brown.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_cyan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_cyan.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_green1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_green1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_green2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_green2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_green3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_green3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_grey1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_grey1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_grey2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_grey2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_grey3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_grey3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_grey4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_grey4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_magenta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_magenta.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_olive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_olive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_orange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_orange.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_pink.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_pink.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_purple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_purple.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_white.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Gridbox/prototype_512x512_yellow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Rocket.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Rocket/rocket_base.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Rocket/rocket_base.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Rocket/rocket_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Rocket/rocket_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Rocks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Rocks/Rocks_Stylized_Color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Props/Rocks/Rocks_Stylized_Color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Skybox.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Skybox/MilkyWayPanorama.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Skybox/MilkyWayPanorama.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/Materials/Rock.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/Materials/Rock.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/Materials/Sand Pebbles.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/Materials/Sand Pebbles.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/Materials/Sand.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/Materials/Sand.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/Rock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/Rock.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/RockN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/RockN.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/Sand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/Sand.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/SandN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/SandN.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/SandPebbles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/SandPebbles.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/SandPebblesN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Terrain/SandPebblesN.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Textures/1-Point.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Textures/1-Point.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Textures/1-Shockwave.tiff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/Textures/1-Shockwave.tiff.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/dust.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/HitFX/Textures/dust.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/MainAudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/MainAudioMixer.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/000 - BasicOre.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/000 - BasicOre.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/001 - IntermediateOre.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/001 - IntermediateOre.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/002 - Spaceship Engine.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/002 - Spaceship Engine.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/ItemsGenerators/BasicOre.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/ItemsGenerators/BasicOre.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/000 - BasicOre.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/000 - BasicOre.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/001 - Intermediate Ore.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Prefabs/001 - Intermediate Ore.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Recipes/EngineRecipe.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Recipes/EngineRecipe.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Recipes/IntermediateOreRecipe.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Recipes/IntermediateOreRecipe.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/FlyingBeetle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/FlyingBeetle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/HPBar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/HPBar.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/LandBeetle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/LandBeetle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Ripper_Dog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Ripper_Dog.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Spider.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Spider.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RangedProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RangedProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pools/ItemsPool.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Pools/ItemsPool.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Ores.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Ores/PP_Gemstone_05_Green.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Ores/PP_Gemstone_05_Green.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Ores/PP_Gemstone_07_Copper.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Ores/PP_Gemstone_07_Copper.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Ores/PP_Gemstone_07_Gold.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Ores/PP_Gemstone_07_Gold.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Ores/PP_Gemstone_11_Red.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Ores/PP_Gemstone_11_Red.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Ores/PP_Gemstone_13_Blue.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Ores/PP_Gemstone_13_Blue.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/MainCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/PauseMenuCanvas 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PauseMenuCanvas 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/MechanicsTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/MechanicsTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioTester.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioTester.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/DropItemsComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/DropItemsComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/HealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/HealthComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyStateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/States/PatrollingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/States/PatrollingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControlling/GameLoop/StormControlling/DomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameControlling/GameLoop/StormControlling/DomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControlling/GameLoop/StormControlling/StormManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameControlling/GameLoop/StormControlling/StormManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControlling/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameControlling/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControlling/RockSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameControlling/RockSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactables/CollectableResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactables/CollectableResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSoundsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSoundsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/EnemiesPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pools/EnemiesPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/EnemyProjectilesPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pools/EnemyProjectilesPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pools/ItemsPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pools/ItemsPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGamePopupsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGamePopupsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControlling/GameSettingsController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControlling/GameSettingsController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControlling/SaveSystem/Save.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameControlling/SaveSystem/Save.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/MainMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/MainMenuController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/VideoSettingsPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/VideoSettingsPopup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VolumetricFog2/Scripts/Managers/FogVoidManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VolumetricFog2/Scripts/Managers/FogVoidManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VolumetricFog2/Scripts/Managers/PointLightManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VolumetricFog2/Scripts/Managers/PointLightManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VolumetricFog2/Scripts/VolumetricFogProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VolumetricFog2/Scripts/VolumetricFogProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/VideoSettingsPopup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/VideoSettingsPopup.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +261,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pools/EnemiesPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pools/EnemyProjectilesPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menus/MainMenuController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menus/SettingsPlayerPrefsInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menus/VideoSettingsPopup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@7fe8299111a7/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@026b2a0827a4/PostProcessing/Runtime/PostProcessDebug.cs" root0="SKIP_HIGHLIGHTING" />
@@ -251,6 +411,9 @@
       <workItem from="1747311840205" duration="9326000" />
       <workItem from="1747391960299" duration="7817000" />
       <workItem from="1747485232373" duration="5602000" />
+      <workItem from="1747492674903" duration="4479000" />
+      <workItem from="1747588426165" duration="4399000" />
+      <workItem from="1747595503025" duration="2187000" />
     </task>
     <servers />
   </component>

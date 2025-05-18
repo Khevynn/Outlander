@@ -2058,8 +2058,8 @@ MonoBehaviour:
   minFleeingDistance: 2
   maxVisionRange: 10
   maxVisionAngle: 90
-  attackMaxCooldown: 2
-  attackDamage: 2
+  attackMaxCooldown: 1.5
+  attackDamage: 10
   attackRange: 2
   projectileSpawnLocation: {fileID: 0}
 --- !u!114 &7051644989459097341
@@ -2075,14 +2075,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsToDrop:
-  - itemPrefab: {fileID: -3855883466955618622, guid: 1294f0013cb61e54ebabc30fd548157e, type: 3}
-    minAmount: 1
-    maxAmount: 3
-    chanceOfDropping: 55
-  - itemPrefab: {fileID: -3463488892718561164, guid: 0ef052fed16b41d40ba3a00b34948387, type: 3}
+  - itemPrefab: {fileID: 7152922524937623360, guid: 85de3ac697b809a44bcd0b58385acd74, type: 3}
     minAmount: 1
     maxAmount: 2
-    chanceOfDropping: 25
+    chanceOfDropping: 60
+  - itemPrefab: {fileID: 7152922524937623360, guid: 85de3ac697b809a44bcd0b58385acd74, type: 3}
+    minAmount: 1
+    maxAmount: 1
+    chanceOfDropping: 20
 --- !u!114 &125167144709858204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2095,7 +2095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa1bbe16f3c07b49b7b88b1554aff8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 90
   currentHealth: 0
   owner: 1
   hpBar: {fileID: 1016364440245889732}

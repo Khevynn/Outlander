@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    private VideoSettings currentVideoSettings;
     [SerializeField] private List<AudioSource> gameSounds;
+    private bool _textToSpeech = true;
 
     private void Awake()
     {
@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(this);
-        currentVideoSettings = SaveManager.savedGame.GetSavedVideoSettings();
         GetAllGameSounds();
     }
 
@@ -82,13 +81,6 @@ public class GameManager : MonoBehaviour
             gameSounds[i].UnPause();
         }
     }
-    
-    public void SaveVideoSettings(VideoSettings settings)
-    {
-        currentVideoSettings = settings;
-        SaveManager.savedGame.SetSavedVideoSettings(settings);
-        SaveManager.OverwriteSave();
-    }
-    
-    public VideoSettings GetCurrentVideoSettings() => currentVideoSettings;
+
+    public bool IsTextToSpeechActive() => _textToSpeech;
 }

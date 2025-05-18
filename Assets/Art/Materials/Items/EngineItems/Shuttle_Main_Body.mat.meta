@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1cd7999c166c662448ddb406934eb9cb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111392
+  packageName: Space shuttle of the future
+  packageVersion: 1.0
+  assetPath: Assets/SpaceShuttle/Assets/Materials/SpaceShuttle v2/Shuttle_Main_Body.mat
+  uploadId: 747435

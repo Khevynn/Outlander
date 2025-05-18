@@ -8,6 +8,8 @@ using VolumetricFogAndMist2;
 
 public class DomeController : MonoBehaviour
 {
+    public static DomeController Instance { get; private set; }
+    
     [Header("References")]
     private HealthComponent playerHealthComponent;
     private FogVoid fogVoidComponent;
@@ -24,21 +26,30 @@ public class DomeController : MonoBehaviour
     [Header("Damage Control")]
     [SerializeField] private float timeBetweenDamage;
     [SerializeField] private float damageAmount;
-    private float currentTimer;
+    private float currentDamageTimer;
     
     private bool isDomeActive;
     private bool isPlayerOutside;
-    
+
+    private void Awake()
+    {
+        if (Instance)
+        {
+            Debug.Log("DomeController already exists, destroying new one");
+            Destroy(this);
+        }
+        else
+            Instance = this;
+    }
     private void Start()
     {
         fogVoidComponent = GetComponent<FogVoid>();
         domeRenderer = GetComponent<MeshRenderer>();
         playerHealthComponent = GameObject.FindWithTag("Player").GetComponent<HealthComponent>();
         currentDurationOfDome = maxDurationOfDome;
-        currentTimer = timeBetweenDamage;
+        currentDamageTimer = timeBetweenDamage;
         isDomeActive = true;
     }
-
     private void FixedUpdate()
     {
         // Update dome duration and handle dome deactivation
@@ -74,12 +85,12 @@ public class DomeController : MonoBehaviour
         }
 
         // Timer and damage handling
-        if (currentTimer > 0f)
+        if (currentDamageTimer > 0f)
         {
-            currentTimer -= Time.fixedDeltaTime;
+            currentDamageTimer -= Time.fixedDeltaTime;
         }
 
-        if (isPlayerOutside && currentTimer <= 0f)
+        if (isPlayerOutside && currentDamageTimer <= 0f)
             DealDamageToPlayer();
     }
 
@@ -91,7 +102,12 @@ public class DomeController : MonoBehaviour
     private void DealDamageToPlayer()
     {
         playerHealthComponent.TakeDamage(damageAmount);
-        currentTimer = timeBetweenDamage;
+        currentDamageTimer = timeBetweenDamage;
+    }
+
+    public void ReduceTimeFromDome(float amount)
+    {
+        currentDurationOfDome -= amount;
     }
     
     private void OnTriggerEnter(Collider other)

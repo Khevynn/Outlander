@@ -142,6 +142,7 @@ public class StormManager : MonoBehaviour
         for (int i = 0; i < numberOfWavesToSpawnIfSkipped; ++i)
             CreateEnemyWave(Mathf.Pow(enemyGrowthRate, currentWave - 1));
 
+        // DomeController.Instance.ReduceTimeFromDome(maxStormDuration);
         currentTimeBetweenStorms = maxTimeBetweenStorms;
         stormProfile.noiseFinalMultiplier = 0f;
         stormAudioSource.volume = 0f;

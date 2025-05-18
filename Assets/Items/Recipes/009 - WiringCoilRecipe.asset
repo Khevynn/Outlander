@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 727a4281a1b1f8348b323c94d511182e, type: 3}
+  m_Name: 009 - WiringCoilRecipe
+  m_EditorClassIdentifier: 
+  necessaryItemsToCraft:
+  - itemData: {fileID: 11400000, guid: 14e1c3a0e2dd35c4aacbf042ac096669, type: 2}
+    quantity: 2
+  - itemData: {fileID: 11400000, guid: 0ea615660e847464c82c17f9726fa4de, type: 2}
+    quantity: 1
+  itemToBeCrafted: {fileID: 11400000, guid: aabc53de863beb742870793813377485, type: 2}
+  amountToBeCrafted: 1

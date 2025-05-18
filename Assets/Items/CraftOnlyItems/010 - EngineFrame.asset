@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b1f577f3e093149a03a912a6a67ee8, type: 3}
+  m_Name: 010 - EngineFrame
+  m_EditorClassIdentifier: 
+  itemId: 10
+  itemName: Engine Frame
+  itemDescription: 'Primary skeleton of the propulsion system. Supports all internal
+    components. Crafted from: AlloyPlate, IronOre, StoneChunk'
+  maxStack: 1
+  itemIcon: {fileID: 21300000, guid: eb44c7776c3e6e44ba5f2425a9055683, type: 3}

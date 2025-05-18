@@ -4,6 +4,28 @@ using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
 
+public class VideoSettings
+{
+    public int ScreenWidth;
+    public int ScreenHeight;
+    public bool isFullScreen;
+    
+    public int FPSCap;
+    public int VsyncCount;
+
+    public int QualityLevel;
+
+    public VideoSettings(Resolution screenResolution, bool fullscreen, int fpsCap, int vsyncCount, int qualityLevel)
+    {
+        ScreenWidth = screenResolution.width;
+        ScreenHeight = screenResolution.height;
+        isFullScreen = fullscreen;
+        FPSCap = fpsCap;
+        VsyncCount = vsyncCount;
+        QualityLevel = qualityLevel;
+    }
+}
+
 public class VideoSettingsPopup : MonoBehaviour
 {
     [Header("References")] 
@@ -21,9 +43,22 @@ public class VideoSettingsPopup : MonoBehaviour
         SetupScreenModeDropdown();
         SetupFPSDropdown();
         SetupGraphicsDropdown();
-        SetDropdownDefaultValues();
+        
+        if (PlayerPrefs.HasKey("ScreenMode"))
+        {
+            LoadVideoSettings();
+        }
+        
+        CallApplySettings();
     }
 
+    private void LoadVideoSettings()
+    {
+        windowModeDropdown.value = PlayerPrefs.GetInt("ScreenMode"); 
+        resolutionsDropdown.value = PlayerPrefs.GetInt("SelectedResolution"); 
+        graphicsDropdown.value = PlayerPrefs.GetInt("QualityLevel"); 
+        fpsDropdown.value = PlayerPrefs.GetInt("FpsCap"); 
+    }
     public void CallApplySettings()
     {
         var screenMode = screenModes[windowModeDropdown.value];
@@ -46,11 +81,15 @@ public class VideoSettingsPopup : MonoBehaviour
                 fpsCap = 30;
                 break;
         }
+
+        PlayerPrefs.SetInt("ScreenMode", windowModeDropdown.value); 
+        PlayerPrefs.SetInt("SelectedResolution", resolutionsDropdown.value); 
+        PlayerPrefs.SetInt("QualityLevel", graphicsDropdown.value); 
+        PlayerPrefs.SetInt("FpsCap", fpsDropdown.value); 
         
         var settings = new VideoSettings(selectedResolution, screenMode == FullScreenMode.FullScreenWindow, fpsCap, 0, qualityLevel);
-        GameSettingsController.Instance.ApplyVideoSettings(settings);
+        ApplyVideoSettings(settings);
     }
-
     
     #region Resolution Dropdown Setup
     
@@ -140,42 +179,12 @@ public class VideoSettingsPopup : MonoBehaviour
         graphicsDropdown.AddOptions(QualitySettings.names.ToList());
         graphicsDropdown.RefreshShownValue();
     }
-    private void SetDropdownDefaultValues()
+    
+    private void ApplyVideoSettings(VideoSettings settings)
     {
-        var currentSettings = GameManager.Instance.GetCurrentVideoSettings();
-
-        for (int i = 0; i < filteredResolutions.Count; ++i)
-        {
-            if (filteredResolutions[i].width == currentSettings.ScreenWidth &&
-                filteredResolutions[i].height == currentSettings.ScreenHeight)
-            {
-                resolutionsDropdown.value = i;
-            }
-        }
-
-        for (int i = 0; i < screenModes.Count; ++i)
-        {
-            if (Screen.fullScreenMode == screenModes[i])
-            {
-                windowModeDropdown.value = i;
-            }
-        }
-
-        graphicsDropdown.value = QualitySettings.GetQualityLevel();
-        
-        if (Application.targetFrameRate == -1)
-        {
-            fpsDropdown.value = 0;
-            return;
-        }
-        
-        for (int i = 0; i < fpsDropdown.options.Count; ++i)
-        {
-            if (Application.targetFrameRate == Int32.Parse(fpsDropdown.options[i].text))
-            {
-                fpsDropdown.value = i;
-            }
-        }
-        
+        Screen.SetResolution(settings.ScreenWidth, settings.ScreenHeight, settings.isFullScreen);
+        QualitySettings.vSyncCount = settings.VsyncCount;
+        Application.targetFrameRate = settings.FPSCap;
+        QualitySettings.SetQualityLevel(settings.QualityLevel, true);
     }
 }
