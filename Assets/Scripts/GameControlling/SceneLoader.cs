@@ -27,6 +27,11 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        if (sceneName == "MainScene")
+        {
+            MenusMusicController.Instance.Destroy();
+        }
+        
         SceneToUnload = SceneManager.GetActiveScene().name;
         SceneToLoad = sceneName;
         SceneManager.LoadScene("LoadingScreen", LoadSceneMode.Additive);

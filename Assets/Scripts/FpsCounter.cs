@@ -8,10 +8,9 @@ public class FpsCounter : MonoBehaviour
     private int m_FpsAccumulator = 0;
     private float m_FpsNextPeriod = 0;
     private int m_CurrentFps;
-    const string display = "{0} FPS";
+    const string display = "FPS: {0}";
     private TMP_Text m_Text;
-
-
+    
     private void Start()
     {
         m_FpsNextPeriod = Time.realtimeSinceStartup + fpsMeasurePeriod;
@@ -26,7 +25,9 @@ public class FpsCounter : MonoBehaviour
             m_CurrentFps = (int) (m_FpsAccumulator/fpsMeasurePeriod);
             m_FpsAccumulator = 0;
             m_FpsNextPeriod += fpsMeasurePeriod;
-            m_Text.text = string.Format(display, m_CurrentFps);
+            var currentFps = string.Format(display, m_CurrentFps);
+            
+            m_Text.text = currentFps;
         }
     }
 }

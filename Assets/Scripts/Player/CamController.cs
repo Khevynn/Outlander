@@ -132,4 +132,8 @@ public class CamController : MonoBehaviour
         transform.rotation = endRot;
     }
 
+    public void SetMouseSensitivity()
+    {
+        mouseSensitivity = PlayerPrefs.HasKey("MouseSensitivity") ? PlayerPrefs.GetFloat("MouseSensitivity") : 1;
+    }
 }
