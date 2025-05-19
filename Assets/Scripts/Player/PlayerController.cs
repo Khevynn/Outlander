@@ -166,7 +166,8 @@ public class PlayerController : MonoBehaviour
     }
     public void PauseOrUnpauseGame()
     {
-        inventoryUI.SetActive(false);
+        if(inventoryUI.activeSelf)
+            inventoryUI.SetActive(false);
         pauseMenuUI.SetActive(!pauseMenuUI.activeSelf);
         Cursor.lockState = pauseMenuUI.activeSelf ? CursorLockMode.None : CursorLockMode.Locked;
         if (pauseMenuUI.activeSelf)

@@ -1,10 +1,13 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader Instance { get; private set; }
+    public string SceneToUnload { get; private set; }
+    public string SceneToLoad { get; private set; }
 
     private void Awake()
     {
@@ -24,6 +27,8 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadSceneAsync(sceneName);
+        SceneToUnload = SceneManager.GetActiveScene().name;
+        SceneToLoad = sceneName;
+        SceneManager.LoadScene("LoadingScreen", LoadSceneMode.Additive);
     }
 }
