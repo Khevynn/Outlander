@@ -15,6 +15,7 @@ public class FpsCounter : MonoBehaviour
     {
         m_FpsNextPeriod = Time.realtimeSinceStartup + fpsMeasurePeriod;
         m_Text = GetComponent<TMP_Text>();
+        SaveManager.StartNewPerformanceGraph();
     }
     private void Update()
     {
@@ -28,6 +29,7 @@ public class FpsCounter : MonoBehaviour
             var currentFps = string.Format(display, m_CurrentFps);
             
             m_Text.text = currentFps;
+            SaveManager.WritePerformance(currentFps);
         }
     }
 }

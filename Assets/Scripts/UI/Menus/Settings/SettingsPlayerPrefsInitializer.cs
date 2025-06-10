@@ -12,28 +12,17 @@ public class SettingsPlayerPrefsInitializer : MonoBehaviour
     [SerializeField] private GameObject pauseMenuObj;
     [SerializeField] private GameObject mainPauseScreen;
     [SerializeField] private GameObject settingsPauseScreen;
-    
+
     private void Start()
     {
         videoSettingsObj.SetActive(false);
         audioSettingsObj.SetActive(false);
         controlsSettingsObj.SetActive(false);
-        
-        if(pauseMenuObj)
-            pauseMenuObj.SetActive(false);
-    }
-
-    private void OnEnable()
-    {
         if (pauseMenuObj)
         {
+            pauseMenuObj.SetActive(false);
             mainPauseScreen.SetActive(true);
             settingsPauseScreen.SetActive(false);
-            
-            videoSettingsObj.SetActive(false);
-            audioSettingsObj.SetActive(false);
-            controlsSettingsObj.SetActive(false);
         }
-        
     }
 }

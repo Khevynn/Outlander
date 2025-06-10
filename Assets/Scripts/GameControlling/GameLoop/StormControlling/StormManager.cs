@@ -288,4 +288,13 @@ public class StormManager : MonoBehaviour
         Debug.LogError("Could not find valid spawn point after multiple attempts.");
         return transform.position;
     }
+
+    public void SetTimeToNextWave(float value)
+    {
+        currentTimeBetweenStorms = value;
+    }
+    public void IncreaseCurrentWave()
+    {
+        currentWave++;
+    }
 }

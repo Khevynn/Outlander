@@ -58,10 +58,9 @@ public class DomeController : MonoBehaviour
             currentDurationOfDome -= Time.fixedDeltaTime;
             fillImage.fillAmount = currentDurationOfDome / maxDurationOfDome;
             percentageText.text = $"{((currentDurationOfDome / maxDurationOfDome) * 100f):F0}%";
-            return;
         }
 
-        if (isDomeActive)
+        if (isDomeActive && currentDurationOfDome <= 0)
         {
             DeactivateDome();
             return;
@@ -113,9 +112,11 @@ public class DomeController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isPlayerOutside = false;
+        print("Entered the dome");
     }
     private void OnTriggerExit(Collider other)
     {
         isPlayerOutside = true;
+        print("Left the dome");
     }
 }

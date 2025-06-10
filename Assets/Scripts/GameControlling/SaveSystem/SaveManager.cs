@@ -49,4 +49,38 @@ public class SaveManager : MonoBehaviour
             file.Close();
         }
     }
+
+    public static void StartNewPerformanceGraph()
+    {
+        string filePath = Path.Combine(Application.persistentDataPath, "GamePerformance.txt");
+
+        // Ensure the file exists before appending
+        if (!File.Exists(filePath))
+        {
+            File.Create(filePath).Close(); // Close immediately to release the handle
+        }
+
+        using (StreamWriter sw = File.AppendText(filePath))
+        {
+            sw.WriteLine("/////////////////////////////////////// STARTED NEW GAME ///////////////////////////////////////");
+        }
+    }
+
+    public static void WritePerformance(string fps)
+    {
+        string filePath = Path.Combine(Application.persistentDataPath, "GamePerformance.txt");
+
+        // Ensure the file exists before appending
+        if (!File.Exists(filePath))
+        {
+            File.Create(filePath).Close(); // Close immediately to release the handle
+        }
+
+        string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+        using (StreamWriter sw = File.AppendText(filePath))
+        {
+            sw.WriteLine($"{timestamp}:{fps}");
+        }
+    }
 }
