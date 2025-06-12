@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EndMenuController : MonoBehaviour
@@ -9,6 +10,7 @@ public class EndMenuController : MonoBehaviour
     
     public void OnTweetButtonClicked()
     {
-        TwitterShare.Instance.ShareToTwitter("I just finished Outlander! What an intense journey.\n #OutlanderGame #GameCompleted");
+        string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        TwitterShare.Instance.ShareToTwitter($"I just finished Outlander! What an intense journey. {timestamp}\n #OutlanderGame #GameCompleted");
     }
 }
