@@ -19,7 +19,7 @@ You play as an astronaut stranded on a toxic, uncharted planet after an emergenc
 
 ## 📷 Trailer
 
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+<a href="https://youtu.be/MHD6IwMgiJ4">
   <img src="Assets/Art/UI/Images/Logo%20-%20With%20text.png" alt="Watch the trailer" width="400"/>
 </a>
 
