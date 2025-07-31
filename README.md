@@ -17,10 +17,11 @@ You play as an astronaut stranded on a toxic, uncharted planet after an emergenc
 - **Narrative & Progression**: Time-limited survival pressure due to degrading dome and resource scarcity.
 - **Social Integration**: Optional Twitter sharing and Discord Rich Presence support.
 
-## 📷 Screenshots
+## 📷 Trailer
 
-> _(Add screenshots or a gameplay trailer here if available)_  
-> `Coming soon...`
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+  <img src="Assets/Art/UI/Images/Logo%20-%20With%20text.png" alt="Watch the trailer" width="400"/>
+</a>
 
 ## 🧱 Technologies Used
 
