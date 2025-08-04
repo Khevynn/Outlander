@@ -80,7 +80,7 @@ Do not redistribute or commercialize without permission.
 
 **Khevynn Mychael**  
 Game Developer — Unity • Unreal Engine • C# • Node.js  
-[LinkedIn](https://www.linkedin.com/) • [Portfolio](https://your-portfolio-link.com) • [Email](mailto:tgwinter@proton.me)
+[LinkedIn](https://www.linkedin.com/in/khevynn-s%C3%A1-8774162a1/) • [Portfolio](https://khevynn-sa-portfolio.vercel.app/) • [Email](mailto:tgwinter@proton.me)
 
 ---
 
